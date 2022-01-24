@@ -5,7 +5,7 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                        <a href="index.php"><img src="assets/img/logo/logo.png" alt=""></a>
                     </div>
                     <div class="menu-wrapper  d-flex align-items-center">
                         <!-- Main-menu -->
@@ -13,8 +13,8 @@
                             <nav>
                                 <ul id="navigation">
                                     <li class="active"><a href="index.php">Trang chủ</a></li>
-                                    <li><a href="about.html">Về chúng tôi</a></li>
-                                    <li><a href="services.html">Dịch vụ</a></li>
+                                    <li><a href="about.php">Về chúng tôi</a></li>
+                                    <li><a href="services.php">Dịch vụ</a></li>
                                     <li><a href="blog.html">Zala Feed</a>
                                         <ul class="submenu">
                                             <li><a href="blog.html">Blog</a></li>

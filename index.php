@@ -48,9 +48,9 @@
                     <?php
                     //** Link dẫn
                         $link1 = array(
-                                        "services.html",
-                                        "services.html",
-                                        "services.html"
+                                        "services.php",
+                                        "services.php",
+                                        "services.php"
                                     );
                     //** Dòng tip
                         $tip = array(
@@ -66,7 +66,7 @@
                                     );
                     for ($i=0; $i < count($tip); $i++) {
                     ?>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="col-4">
                             <div class="single-cat text-center">
                                 <div class="cat-icon">
                                     <img src="assets/img/icon/services-icon<?=($i+1)?>.svg" alt="">
@@ -109,7 +109,7 @@
                                     <img src="assets/img/icon/offers-icon1.png" alt="">
                                 </div>
                                 <div class="cat-cap">
-                                    <h5><a href="services.html">Cloth laundry</a></h5>
+                                    <h5><a href="services.php">Cloth laundry</a></h5>
                                     <p>The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!!</p>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                                     <img src="assets/img/icon/offers-icon1.png" alt="">
                                 </div>
                                 <div class="cat-cap">
-                                    <h5><a href="services.html">Cloth ironing</a></h5>
+                                    <h5><a href="services.php">Cloth ironing</a></h5>
                                     <p>The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!!</p>
                                 </div>
                             </div>
