@@ -285,7 +285,7 @@
         </div>
         <!-- Map Area End -->
     </main>
-<?php include("./reuse/footer_body.php")?>
+    <?php include("./reuse/footer_body.php")?>
     <!-- Scroll Up -->
     <div id="back-top">
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
