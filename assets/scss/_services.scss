@@ -1,5 +1,5 @@
-.hero-caption{
-    & span{
+.hero-caption {
+    & span {
         color: #fff;
         font-size: 16px;
         display: block;
@@ -7,18 +7,18 @@
         font-weight: 600;
         padding-left: 95px;
         position: relative;
-        &::before{
+        &::before {
             position: absolute;
             content: "";
             width: 75px;
             height: 3px;
-            background:$theme-color;
+            background: $theme-color;
             left: 0;
             top: 52%;
             transform: translateY(-50%);
         }
     }
-    & h2{
+    & h2 {
         color: #fff;
         font-size: 50px;
         font-weight: 700;

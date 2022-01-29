@@ -13,7 +13,6 @@ $text-color: #828bb2;
 $white: #fff;
 $offwhite: #f9f9ff;
 $black: #000;
-
 //    Mixins
 @mixin transition($args: all 0.3s ease 0s) {
     -webkit-transition: $args;
@@ -51,7 +50,7 @@ $black: #000;
     filter: $filter-type+unquote("(#{$filter-amount})");
 }
 
-@mixin gradient($deg, $args1,$args2){
+@mixin gradient($deg, $args1, $args2) {
     background: -webkit-linear-gradient($deg, $args1, $args2);
     background: -moz-linear-gradient($deg, $args1, $args2);
     background: -o-linear-gradient($deg, $args1, $args2);
@@ -73,6 +72,7 @@ $black: #000;
     -o-animation: $args;
     animation: $args;
 }
+
 .sample-text-area {
     background: $white;
     padding: 100px 0 70px 0;
@@ -1051,19 +1051,24 @@ del {
         right: 20px;
     }
 }
+
 .mt-10 {
     margin-top: 10px;
 }
+
 .section-top-border {
     padding: 50px 0;
     border-top: 1px dotted #eee;
 }
+
 .mb-30 {
     margin-bottom: 30px;
 }
+
 .mt-30 {
     margin-top: 30px;
 }
+
 .switch-wrap {
     margin-bottom: 10px;
 }
