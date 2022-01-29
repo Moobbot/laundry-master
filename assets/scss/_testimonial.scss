@@ -1,7 +1,7 @@
-
 /* testimonials */
-.testimonials-area{
-    .testmonial-item{
+
+.testimonials-area {
+    .testmonial-item {
         .rating i {
             font-size: 15px;
             color: #FBBA42;
@@ -9,19 +9,19 @@
         p {
             color: #1D2547;
             font-size: 18px;
-            @media #{$md}{
+            @media #{$md} {
                 margin-bottom: 19px;
             }
-            @media #{$sm}{
+            @media #{$sm} {
                 margin-bottom: 19px;
-                br{
+                br {
                     display: none;
                 }
             }
-            @media #{$xs}{
+            @media #{$xs} {
                 margin-bottom: 19px;
                 font-size: 16px;
-                br{
+                br {
                     display: none;
                 }
             }
@@ -43,7 +43,6 @@
         button {
             color: #1D2547;
             font-size: 21px;
-
             i {
                 cursor: pointer;
                 color: #1D2547;
@@ -53,38 +52,36 @@
             }
             &.slick-next {
                 right: -239%;
-                @media #{$lg}{
+                @media #{$lg} {
                     right: -185%;
                 }
-                @media #{$md}{
+                @media #{$md} {
                     display: none !important;
                 }
-                @media #{$sm}{
+                @media #{$sm} {
                     display: none !important;
                 }
-                @media #{$xs}{
+                @media #{$xs} {
                     display: none !important;
                 }
             }
             &.slick-prev {
                 left: -241%;
-                @media #{$lg}{
+                @media #{$lg} {
                     left: -189%;
                 }
-                @media #{$md}{
+                @media #{$md} {
                     display: none !important;
                 }
-                @media #{$sm}{
+                @media #{$sm} {
                     display: none !important;
                 }
-                @media #{$xs}{
+                @media #{$xs} {
                     display: none !important;
                 }
-                
             }
         }
     }
-
     .testmonial-nav button {
         background: none;
         position: absolute;
@@ -101,7 +98,6 @@
         transition: .6s;
         opacity: 0.4;
     }
-    
     .testmonial-thumb.slick-center img {
         transform: scale(1);
         opacity: 1;
@@ -115,6 +111,7 @@
 .slick-initialized .slick-slide {
     display: block;
 }
+
 .slick-initialized .slick-slide {
     outline: 0;
 }

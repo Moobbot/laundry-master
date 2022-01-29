@@ -1,26 +1,25 @@
-
 // About 02
-.about-area2{
+.about-area2 {
     // left content
-    .about-caption{
+    .about-caption {
         padding-left: 50px;
-        @media #{$laptop}{
+        @media #{$laptop} {
             padding-left: 50px;
         }
-        @media #{$lg}{
+        @media #{$lg} {
             padding-left: 0px;
         }
-        @media #{$md}{
-          padding-top: 50px;
-          padding-left: 0px;
+        @media #{$md} {
+            padding-top: 50px;
+            padding-left: 0px;
         }
-        @media #{$sm}{
-          padding-top: 50px;
-          padding-left: 0px;
+        @media #{$sm} {
+            padding-top: 50px;
+            padding-left: 0px;
         }
-        @media #{$xs}{
-          padding-top: 40px;
-          padding-left: 0px;
+        @media #{$xs} {
+            padding-top: 40px;
+            padding-left: 0px;
         }
         .pera-top {
             font-size: 16px;
@@ -35,14 +34,15 @@
         }
     }
     // Right img
-    .about-img{
-        img{
+    .about-img {
+        img {
             width: 100%;
         }
     }
 }
-.about-caption{
-    @media #{$xs}{
+
+.about-caption {
+    @media #{$xs} {
         margin-bottom: 35px;
     }
 }

@@ -1,4 +1,4 @@
-.wantToWork-area{
+.wantToWork-area {
     // padding-bottom: 150px;
     // @media #{$md}{
     //     padding-bottom: 100px;
@@ -9,69 +9,69 @@
     // @media #{$xs}{
     //     padding-bottom: 70px;
     // }
-    .wantToWork-caption{
-        h2{
+    .wantToWork-caption {
+        h2 {
             font-size: 35px;
             font-weight: 700;
             line-height: 1.5;
             margin-bottom: 10px;
             color: #fff;
-            @media #{$md}{
-                font-size: 30px; 
+            @media #{$md} {
+                font-size: 30px;
             }
-            @media #{$sm}{
-                font-size: 35px; 
+            @media #{$sm} {
+                font-size: 35px;
             }
-            @media #{$xs}{
-                font-size: 25px; 
+            @media #{$xs} {
+                font-size: 25px;
             }
-        } 
-        p{
+        }
+        p {
             font-size: 18px;
             margin-bottom: 0;
             color: #fff;
         }
-    }    
-    .wantToWork-btn{
-
-        @media #{$sm}{
+    }
+    .wantToWork-btn {
+        @media #{$sm} {
             float: left;
             margin-top: 30px;
         }
-        @media #{$xs}{
+        @media #{$xs} {
             float: left;
             margin-top: 30px;
         }
-        @media #{$md}{
+        @media #{$md} {
             float: left;
             margin-top: 30px;
         }
     }
 }
-.sm-left{
-    @media #{$xs}{
+
+.sm-left {
+    @media #{$xs} {
         float: left;
         margin-top: 30px;
-    } 
-    @media #{$sm}{
+    }
+    @media #{$sm} {
         float: left;
         margin-top: 30px;
-    } 
-}
-.btn.w-btn {
-	padding: 18px 65px 18px 33px;
-}
-.double-btn.f-right {
-    @media #{$sm}{
-        float: left;
-    } 
-    @media #{$xs}{
-        float: left;
-    } 
-	
+    }
 }
 
+.btn.w-btn {
+    padding: 18px 65px 18px 33px;
+}
+
+.double-btn.f-right {
+    @media #{$sm} {
+        float: left;
+    }
+    @media #{$xs} {
+        float: left;
+    }
+}
 
 .wantToWork-btn img {
-	margin-right: 9px;
+    margin-right: 9px;
 }

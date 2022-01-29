@@ -1,13 +1,16 @@
-.breadcam_bg{
+.breadcam_bg {
     background-image: url(../img/banner/bradcam.png);
 }
-.breadcam_bg_1{
+
+.breadcam_bg_1 {
     background-image: url(../img/banner/bradcam2.png);
 }
-.breadcam_bg_2{
+
+.breadcam_bg_2 {
     background-image: url(../img/banner/bradcam3.png);
 }
-.bradcam_area{
+
+.bradcam_area {
     background-size: cover;
     background-position: center center;
     padding: 160px 0;
@@ -19,7 +22,7 @@
     @media #{$tablet_device} {
         padding: 150px 0;
     }
-    h3{
+    h3 {
         font-size: 50px;
         color: #fff;
         font-weight: 900;
@@ -35,7 +38,7 @@
     }
 }
 
-.popup_box{
+.popup_box {
     // position: absolute;
     // left: 50%;
     // top: 50%;
@@ -53,14 +56,13 @@
         width: 420px !important;
         padding: 45px 30px;
     }
-    
-    h3{
+    h3 {
         text-align: center;
         font-size: 22px;
         color: #1F1F1F;
         margin-bottom: 46px;
     }
-    .boxed-btn3{
+    .boxed-btn3 {
         width: 100%;
         text-transform: capitalize;
     }
@@ -128,6 +130,7 @@
         }
     }
 }
+
 #test-form {
     display: inline-block;
     margin: auto;
@@ -135,8 +138,8 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    @include transform (translate(-50%,-50%));
-    @media #{$mobile_device}{
+    @include transform (translate(-50%, -50%));
+    @media #{$mobile_device} {
         top: 0;
         left: 0;
         width: 100%;
@@ -147,8 +150,8 @@
         color: #333;
         display: none !important;
     }
-    button{
-        &.mfp-close{
+    button {
+        &.mfp-close {
             display: none !important;
             @media #{$mobile_device} {
                 display: block !important;
@@ -187,15 +190,15 @@
 }
 
 .mfp-bg {
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1042;
-	overflow: hidden;
-	position: fixed;
-	background: #4A3600;
-	opacity: 0.6;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1042;
+    overflow: hidden;
+    position: fixed;
+    background: #4A3600;
+    opacity: 0.6;
 }
 
 .gj-picker.gj-picker-md.datepicker.gj-unselectable {
@@ -203,15 +206,15 @@
         // width: 320px;
         // left: 0 !important;
     }
-
 }
+
 .gj-picker.gj-picker-md.timepicker {
     @media #{$mobile_device} {
         width: 310px;
         left: 6px !important;
     }
-
 }
+
 .gj-picker.gj-picker-md.datepicker.gj-unselectable {
     @media #{$mobile_device} {
         width: 320px;

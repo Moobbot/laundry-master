@@ -1,47 +1,46 @@
-.services-area{
-    .single-cat{
+.services-area {
+    .single-cat {
         @include transition(.4s);
         z-index: 1;
-        .cat-icon{
-            img{
+        .cat-icon {
+            img {
                 margin-bottom: 30px;
             }
         }
-        .cat-cap{
-            span{
+        .cat-cap {
+            span {
                 color: #6785FF;
                 font-size: 46px;
                 font-weight: 600;
                 margin-bottom: 10px;
                 display: block;
             }
-            h5{
-             & > a{
-                font-size: 24px;
-                font-weight: 600;
-                margin-bottom: 21px;
-                display: block;
-                @include transition(.2s);
-                text-transform: capitalize;
-                @media #{$sm}{
-                    font-size: 21px;
+            h5 {
+                &>a {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 21px;
+                    display: block;
+                    @include transition(.2s);
+                    text-transform: capitalize;
+                    @media #{$sm} {
+                        font-size: 21px;
+                    }
+                    @media #{$xs} {
+                        font-size: 23px;
+                    }
                 }
-                @media #{$xs}{
-                    font-size: 23px;
-                }
-              }
             }
-            p{
+            p {
                 margin-bottom: 36px;
                 color: #57667e;
                 font-size: 16px;
                 @include transition(.2s);
-                @media #{$sm}{
+                @media #{$sm} {
                     font-size: 15px;
-
                 }
             }
-            a{
+            a {
                 color: #1c165c;
                 font-size: 16px;
                 font-weight: 600;
@@ -49,68 +48,65 @@
             }
         }
         // Hover Effect In single 
-        &:hover{
-            .cat-cap{
-                h5{
+        &:hover {
+            .cat-cap {
+                h5 {
                     color: #000;
                 }
-
             }
-       }
+        }
     }
 }
 
 // Services
 .service-area {
     padding-top: 260px;
-    @media #{$xs}{
+    @media #{$xs} {
         padding-top: 100px;
     }
-    @media #{$sm}{
+    @media #{$sm} {
         padding-top: 100px;
     }
-    @media #{$md}{
+    @media #{$md} {
         padding-top: 150px;
     }
-    .single-main{
-        @media #{$md}{
-           margin-bottom: 30px;
+    .single-main {
+        @media #{$md} {
+            margin-bottom: 30px;
         }
-        @media #{$sm}{
-           margin-bottom: 30px;
+        @media #{$sm} {
+            margin-bottom: 30px;
         }
-        @media #{$xs}{
-           margin-bottom: 30px;
+        @media #{$xs} {
+            margin-bottom: 30px;
         }
-        .single-wrapper{
+        .single-wrapper {
             @include transition(.2s);
-            .single-services{
-                box-shadow: 0px 22px 57px 0px rgba(34,41,72,0.05);
+            .single-services {
+                box-shadow: 0px 22px 57px 0px rgba(34, 41, 72, 0.05);
                 padding: 34px 31px 20px 29px;
                 @include transition(.4s);
                 background: #fff;
-                @media #{$sm}{
+                @media #{$sm} {
                     padding: 16px 40px;
                 }
-                span{
-                font-size: 19px;
-                margin-bottom: 20px;
-                display: block;
-                font-weight: 300;
+                span {
+                    font-size: 19px;
+                    margin-bottom: 20px;
+                    display: block;
+                    font-weight: 300;
                 }
-                h4{
-                font-size: 24px;
-                display: block;
-                font-weight: 800;
-                text-transform: uppercase;
-                margin-bottom: 20px;
+                h4 {
+                    font-size: 24px;
+                    display: block;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
                 }
-                p{
-                    
-                }
+                p {}
             }
-            .services-btn{
-                a{
+            .services-btn {
+                a {
                     cursor: pointer;
                     padding: 36px 0;
                     background: #FF3514;
@@ -120,21 +116,21 @@
                     text-align: center;
                     font-size: 22px;
                 }
-            }   
-            &.active{
+            }
+            &.active {
                 opacity: 1;
                 visibility: visible;
             }
-            &.hide{
+            &.hide {
                 opacity: 0;
                 visibility: hidden;
             }
         }
         // Btn hide
-        .transparrent-btn{
+        .transparrent-btn {
             cursor: pointer;
             padding: 36px 0;
-            background: rgba(20,12,64,0.2);
+            background: rgba(20, 12, 64, 0.2);
             line-height: 1;
             width: 100%;
             display: block;
@@ -146,98 +142,96 @@
             text-transform: uppercase;
             font-weight: 700;
             @include transition(.2s);
-            &.active{
+            &.active {
                 opacity: 0;
                 visibility: hidden;
             }
         }
         // Hove Effect
-        &:hover{
-            .single-wrapper{
-                &.hide{
+        &:hover {
+            .single-wrapper {
+                &.hide {
                     opacity: 1 !important;
                     visibility: visible !important;
                 }
             }
-            .transparrent-btn{
+            .transparrent-btn {
                 opacity: 0;
                 visibility: hidden;
             }
         }
-        &:hover{
-            .single-wrapper .active{
-                &.active{
+        &:hover {
+            .single-wrapper .active {
+                &.active {
                     opacity: 1 !important;
                     visibility: visible !important;
                 }
             }
-            .transparrent-btn{
-                &.active{
+            .transparrent-btn {
+                &.active {
                     opacity: 0;
                     visibility: hidden;
                 }
             }
         }
     }
- }
+}
 
- 
 // offer-services
-.offer-services{
-    .single-offers{
+.offer-services {
+    .single-offers {
         position: relative;
-        .offers-caption{
+        .offers-caption {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-
-            .cat-icon{
-                img{
+            .cat-icon {
+                img {
                     margin-bottom: 30px;
-                    @media #{$xs}{
+                    @media #{$xs} {
                         margin-bottom: 9px;
                     }
                 }
             }
-            .cat-cap{
+            .cat-cap {
                 padding: 0 102px;
-                @media #{$md}{
+                @media #{$md} {
                     padding: 0 10px;
                 }
-                @media #{$xs}{
+                @media #{$xs} {
                     padding: 0 10px;
                 }
-                h5{
-                 & > a{
-                     color: #fff;
-                    font-size: 24px;
-                    font-weight: 600;
-                    margin-bottom: 21px;
-                    display: block;
-                    @include transition(.2s);
-                    text-transform: capitalize;
-                    @media #{$sm}{
-                        font-size: 21px;
-                    }
-                    @media #{$xs}{
-                        font-size: 23px;
-                        margin-bottom: 10px;
-                    }
+                h5 {
+                    &>a {
+                        color: #fff;
+                        font-size: 24px;
+                        font-weight: 600;
+                        margin-bottom: 21px;
+                        display: block;
+                        @include transition(.2s);
+                        text-transform: capitalize;
+                        @media #{$sm} {
+                            font-size: 21px;
+                        }
+                        @media #{$xs} {
+                            font-size: 23px;
+                            margin-bottom: 10px;
+                        }
                     }
                 }
-                p{
+                p {
                     margin-bottom: 36px;
                     color: #fff;
                     font-size: 16px;
                     @include transition(.2s);
-                    @media #{$sm}{
+                    @media #{$sm} {
                         font-size: 15px;
                     }
-                    @media #{$xs}{
+                    @media #{$xs} {
                         margin-bottom: 0px;
                     }
                 }
-                a{
+                a {
                     color: #1c165c;
                     font-size: 16px;
                     font-weight: 600;
@@ -245,27 +239,24 @@
                 }
             }
             // Hover Effect In single 
-            &:hover{
-                .cat-cap{
-                    h5{
+            &:hover {
+                .cat-cap {
+                    h5 {
                         color: #000;
                     }
-    
                 }
-           }
+            }
         }
-    }   
+    }
 }
 
-
-
 .bottom-bt img {
-	width: 103%;
+    width: 103%;
     background-size: cover;
-    @media #{$xs}{
+    @media #{$xs} {
         width: 100%;
     }
-    @media #{$sm}{
+    @media #{$sm} {
         width: 100%;
     }
 }

@@ -1,8 +1,7 @@
-
-.gallery-area{
-    .single-gallery{
+.gallery-area {
+    .single-gallery {
         position: relative;
-        &::before{
+        &::before {
             position: absolute;
             top: 0;
             left: 0;
@@ -10,24 +9,24 @@
             height: 100%;
             width: 100%;
             content: "";
-            background-color: rgba(1,10,28,0.4);
+            background-color: rgba(1, 10, 28, 0.4);
             opacity: 0;
             z-index: 1;
             @include transition(.4s);
         }
-        &:hover{
-            &::before{
+        &:hover {
+            &::before {
                 opacity: 1;
-                visibility:visible;
-                }
+                visibility: visible;
+            }
         }
         // img
-        .gallery-img{
+        .gallery-img {
             position: relative;
             height: 565px;
             background-size: cover;
             background-repeat: no-repeat;
-            @media #{$xs}{
+            @media #{$xs} {
                 height: 420px;
             }
         }
@@ -53,22 +52,22 @@
                     font-size: 22px;
                     margin-bottom: 26px;
                     text-transform: uppercase;
-                    @media #{$laptop}{
+                    @media #{$laptop} {
                         font-size: 25px;
                     }
-                    @media #{$lg}{
+                    @media #{$lg} {
                         font-size: 32px;
                     }
-                    @media #{$xs}{
+                    @media #{$xs} {
                         font-size: 32px;
                     }
                 }
-                p{
+                p {
                     font-size: 16px;
                     color: #ffff;
                     padding: 0 82px;
                     line-height: 1.6;
-                    @media #{$xs}{
+                    @media #{$xs} {
                         padding: 0 18px;
                     }
                 }
@@ -86,6 +85,3 @@
         }
     }
 }
-
-
-
