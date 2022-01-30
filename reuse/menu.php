@@ -14,12 +14,13 @@
         <!-- Header Start -->
         <div class="header-area">
             <div class="main-header header-sticky">
-                <!-- Logo -->
                 <div class="header-left">
+                    <!-- Logo -->
                     <div class="logo">
                         <a href="index.php"><img src="assets/img/logo/logo.png" alt=""></a>
                     </div>
-                    <div class="menu-wrapper  d-flex align-items-center">
+
+                    <div class="menu-wrapper d-flex align-items-center">
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
                             <nav>
