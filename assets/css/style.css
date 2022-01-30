@@ -1,3 +1,39 @@
+/* Theme Description
+-------------------------------------------------
+
+	Theme Name:
+	Author:
+	Support:
+	Description:
+	Version:
+	
+------------------------------------------------- 
+*/
+
+
+/* CSS Index
+-------------------------------------------------
+
+	1. Theme default css
+	2. header
+	3. slider
+	4. about-area
+	5. features-box
+	6. department
+	7. team
+	8. video-area
+	9. counter
+	10. footer
+
+-------------------------------------------------
+*/
+
+
+/*--------------- ---- Responsive --------------------------*/
+
+
+/*-------------   Color Variable  --------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600;700;800&family=Raleway:wght@400;500;600;700;800;900&display=swap');
 .white-bg {
     background: #ffffff;
@@ -7,12 +43,18 @@
     background: #f5f9fb;
 }
 
+
+/*-------------Color include--------------*/
+
+
+/*-- Background color---*/
+
 .gray-bg {
     background: #f7f7fd;
 }
 
 .white-bg {
-    background: #fff;
+    background: #ffffff;
 }
 
 .black-bg {
@@ -31,8 +73,11 @@
     background: #f9fafc;
 }
 
+
+/*--- color------*/
+
 .white-color {
-    color: #fff;
+    color: #ffffff;
 }
 
 .black-color {
@@ -74,6 +119,11 @@
     width: 220px;
 }
 
+
+/*--
+    - Overlay
+------------------------------------------*/
+
 [data-overlay] {
     position: relative;
     background-size: cover;
@@ -89,6 +139,9 @@
     bottom: 0;
     content: '';
 }
+
+
+/*-- Overlay Opacity --*/
 
 [data-opacity='1']::before {
     opacity: 0.1;
@@ -125,6 +178,9 @@
 [data-opacity='9']::before {
     opacity: 0.9;
 }
+
+
+/* 1. Theme default css */
 
 body {
     font-family: 'Muli', sans-serif;
@@ -171,8 +227,6 @@ p {
 .img {
     max-width: 100%;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -195,8 +249,6 @@ p {
 a,
 .button {
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -242,7 +294,6 @@ textarea:focus {
 input:focus::-moz-placeholder {
     opacity: 0;
     -webkit-transition: 0.4s;
-    -o-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -274,6 +325,9 @@ hr {
     margin: 30px 0;
     padding: 0;
 }
+
+
+/* Theme-overlay */
 
 .theme-overlay {
     position: relative;
@@ -347,6 +401,9 @@ hr {
     }
 }
 
+
+/* owl-carousel button style */
+
 .owl-carousel .owl-nav div {
     background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
     height: 40px;
@@ -359,7 +416,9 @@ hr {
     position: absolute;
     text-align: center;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     width: 40px;
 }
@@ -401,7 +460,9 @@ hr {
     display: inline-block;
     font-size: 18px;
     background-size: 200%;
+    -webkit-transition: 0.6s;
     transition: 0.6s;
+    background-image: -webkit-gradient( linear, right top, left top, from(#6785ff), color-stop(#5172f5), to(#6785ff));
     background-image: linear-gradient(to left, #6785ff, #5172f5, #6785ff);
     background-position: right;
 }
@@ -413,8 +474,6 @@ hr {
     position: relative;
     left: 26px;
     -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -441,8 +500,6 @@ hr {
     position: relative;
     left: 26px;
     -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -508,12 +565,14 @@ hr {
 .btn.focus,
 .btn:focus {
     outline: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
 .btn.focus,
 .btn:focus {
     outline: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -608,6 +667,7 @@ hr {
     letter-spacing: 1px;
     margin-bottom: 0;
     position: relative;
+    -webkit-transition: color 0.4s linear;
     transition: color 0.4s linear;
     position: relative;
     overflow: hidden;
@@ -630,15 +690,23 @@ hr {
     height: 101%;
     background: #6785ff;
     z-index: -1;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
+    -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
+    -webkit-transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
     transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    -webkit-transform: scaleY(0);
     transform: scaleY(0);
     border-radius: 0;
 }
 
 .border-btn:hover::before {
+    -webkit-transform: scaleY(1);
     transform: scaleY(1);
     border: 1px solid transparent;
 }
@@ -662,9 +730,15 @@ hr {
     background-repeat: no-repeat;
 }
 
+
+/* button style */
+
 .breadcrumb>.active {
     color: #888;
 }
+
+
+/* scrollUp */
 
 #scrollUp,
 #back-top {
@@ -680,6 +754,7 @@ hr {
     border-radius: 50%;
     line-height: 48px;
     border: 2px solid transparent;
+    -webkit-box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
     box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
 }
 
@@ -700,6 +775,9 @@ hr {
     color: #fff;
 }
 
+
+/* Sticky*/
+
 .sticky-bar {
     left: 0;
     margin: auto;
@@ -714,6 +792,15 @@ hr {
     -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
     background: #fff;
 }
+
+
+/* Sticky end */
+
+
+/*--- Margin & Padding --*/
+
+
+/*-- Margin Top --*/
 
 .mt-5 {
     margin-top: 5px;
@@ -875,6 +962,9 @@ hr {
     margin-top: 200px;
 }
 
+
+/*-- Margin Bottom --*/
+
 .mb-5 {
     margin-bottom: 5px;
 }
@@ -1034,6 +1124,9 @@ hr {
 .mb-200 {
     margin-bottom: 200px;
 }
+
+
+/*-- Margin Left --*/
 
 .ml-5 {
     margin-left: 5px;
@@ -1195,6 +1288,9 @@ hr {
     margin-left: 200px;
 }
 
+
+/*-- Margin Right --*/
+
 .mr-5 {
     margin-right: 5px;
 }
@@ -1354,6 +1450,9 @@ hr {
 .mr-200 {
     margin-right: 200px;
 }
+
+
+/*-- Padding Top --*/
 
 .pt-5 {
     padding-top: 5px;
@@ -1519,6 +1618,9 @@ hr {
     padding-top: 260px;
 }
 
+
+/*-- Padding Bottom --*/
+
 .pb-5 {
     padding-bottom: 5px;
 }
@@ -1678,6 +1780,9 @@ hr {
 .pb-200 {
     padding-bottom: 200px;
 }
+
+
+/*-- Padding Left --*/
 
 .pl-5 {
     padding-left: 5px;
@@ -1839,6 +1944,9 @@ hr {
     padding-left: 200px;
 }
 
+
+/*-- Padding Right --*/
+
 .pr-5 {
     padding-right: 5px;
 }
@@ -1999,10 +2107,20 @@ hr {
     padding-right: 200px;
 }
 
+
+/*-- Some Animated CSS -- */
+
+
+/* bounce-animate */
+
 .bounce-animate {
+    -webkit-animation-name: float-bob;
     animation-name: float-bob;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    /* animation-timing-function: linear; */
     -moz-animation-name: float-bob;
     -moz-animation-duration: 2s;
     -moz-animation-iteration-count: infinite;
@@ -2032,7 +2150,11 @@ hr {
     }
 }
 
+
+/* heartbeat */
+
 .heartbeat {
+    -webkit-animation: heartbeat 1s infinite alternate;
     animation: heartbeat 1s infinite alternate;
 }
 
@@ -2042,6 +2164,9 @@ hr {
         transform: scale(1.03);
     }
 }
+
+
+/* rotateme */
 
 .rotateme {
     -webkit-animation-name: rotateme;
@@ -2074,6 +2199,9 @@ hr {
     }
 }
 
+
+/* 20. preloader */
+
 .preloader {
     background-color: #f7f7f7;
     width: 100%;
@@ -2084,15 +2212,14 @@ hr {
     right: 0;
     bottom: 0;
     z-index: 999999;
-    -webkit-transition: 0.6s;
-    -o-transition: 0.6s;
-    transition: 0.6s;
+    -webkit-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
     margin: 0 auto;
 }
 
-.preloader .preloader-circle {
-    width: 100px;
-    height: 100px;
+.preloader .preloader-inner .preloader-circle {
+    width: 8em;
+    height: 8em;
     position: relative;
     border-style: solid;
     border-width: 1px;
@@ -2100,48 +2227,36 @@ hr {
     border-bottom-color: transparent;
     border-left-color: transparent;
     border-right-color: transparent;
-    z-index: 10;
     border-radius: 50%;
+    z-index: 10;
     -webkit-box-shadow: 0 1px 5px 0 rgba(35, 181, 185, 0.15);
     box-shadow: 0 1px 5px 0 rgba(35, 181, 185, 0.15);
-    background-color: #fff;
+    background-color: #ffffff;
     -webkit-animation: zoom 2000ms infinite ease;
     animation: zoom 2000ms infinite ease;
-    -webkit-transition: 0.6s;
-    -o-transition: 0.6s;
-    transition: 0.6s;
+    -webkit-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
 }
 
-.preloader .preloader-circle2 {
-    border-top-color: #0078ff;
-}
-
-.preloader .preloader-img {
+.preloader .preloader-inner .preloader-img {
     position: absolute;
     top: 50%;
-    z-index: 200;
+    z-index: 11;
     left: 0;
     right: 0;
     margin: 0 auto;
     text-align: center;
     display: inline-block;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    padding-top: 6px;
-    -webkit-transition: 0.6s;
+    -ms-transform: translateY(-50%);
+    -webkit-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
     -o-transition: 0.6s;
-    transition: 0.6s;
 }
 
-.preloader .preloader-img img {
-    max-width: 55px;
-}
-
-.preloader .pere-text strong {
-    font-weight: 800;
-    color: #dca73a;
-    text-transform: uppercase;
+.preloader .preloader-circle2 {
+    border-top-color: #0078ff;
 }
 
 @-webkit-keyframes zoom {
@@ -2149,14 +2264,12 @@ hr {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
         -webkit-transition: 0.6s;
-        -o-transition: 0.6s;
         transition: 0.6s;
     }
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
         -webkit-transition: 0.6s;
-        -o-transition: 0.6s;
         transition: 0.6s;
     }
 }
@@ -2166,14 +2279,12 @@ hr {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
         -webkit-transition: 0.6s;
-        -o-transition: 0.6s;
         transition: 0.6s;
     }
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
         -webkit-transition: 0.6s;
-        -o-transition: 0.6s;
         transition: 0.6s;
     }
 }
@@ -2181,6 +2292,9 @@ hr {
 .slick-initialized .slick-slide {
     outline: 0;
 }
+
+
+/*-- Section Padding -- */
 
 .section-padding2 {
     padding-top: 200px;
@@ -2616,6 +2730,9 @@ hr {
     letter-spacing: 1px;
 }
 
+
+/*-------------   Color Variable  --------------*/
+
 .white-bg {
     background: #ffffff;
 }
@@ -2624,12 +2741,18 @@ hr {
     background: #f5f9fb;
 }
 
+
+/*-------------Color include--------------*/
+
+
+/*-- Background color---*/
+
 .gray-bg {
     background: #f7f7fd;
 }
 
 .white-bg {
-    background: #fff;
+    background: #ffffff;
 }
 
 .black-bg {
@@ -2648,8 +2771,11 @@ hr {
     background: #f9fafc;
 }
 
+
+/*--- color------*/
+
 .white-color {
-    color: #fff;
+    color: #ffffff;
 }
 
 .black-color {
@@ -2662,26 +2788,36 @@ hr {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .header-area {
+        -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
         box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
     }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
     .header-area {
+        -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
         box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
     }
 }
 
 @media (max-width: 575px) {
     .header-area {
+        -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
         box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
     }
 }
 
 .main-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -2704,14 +2840,21 @@ hr {
 }
 
 .main-header .header-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .main-header .header-left .logo {
-    padding-left: 50px;
+    padding-left: 15px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -2763,8 +2906,6 @@ hr {
     font-size: 16px;
     text-transform: capitalize;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -2806,11 +2947,10 @@ hr {
     top: 90%;
     visibility: hidden;
     opacity: 0;
+    -webkit-box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
     padding: 17px 0;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -3255,8 +3395,6 @@ hr {
 
 .services-area .single-cat {
     -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
     transition: 0.4s;
     z-index: 1;
 }
@@ -3279,8 +3417,6 @@ hr {
     margin-bottom: 21px;
     display: block;
     -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
     text-transform: capitalize;
 }
@@ -3302,8 +3438,6 @@ hr {
     color: #57667e;
     font-size: 16px;
     -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -3318,8 +3452,6 @@ hr {
     font-size: 16px;
     font-weight: 600;
     -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -3369,17 +3501,14 @@ hr {
 
 .service-area .single-main .single-wrapper {
     -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
 .service-area .single-main .single-wrapper .single-services {
+    -webkit-box-shadow: 0px 22px 57px 0px rgba(34, 41, 72, 0.05);
     box-shadow: 0px 22px 57px 0px rgba(34, 41, 72, 0.05);
     padding: 34px 31px 20px 29px;
     -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
     transition: 0.4s;
     background: #fff;
 }
@@ -3441,8 +3570,6 @@ hr {
     text-transform: uppercase;
     font-weight: 700;
     -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -3478,6 +3605,7 @@ hr {
 .offer-services .single-offers .offers-caption {
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
@@ -3514,8 +3642,6 @@ hr {
     margin-bottom: 21px;
     display: block;
     -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
     text-transform: capitalize;
 }
@@ -3538,8 +3664,6 @@ hr {
     color: #fff;
     font-size: 16px;
     -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -3560,8 +3684,6 @@ hr {
     font-size: 16px;
     font-weight: 600;
     -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
     transition: 0.2s;
 }
 
@@ -3585,6 +3707,9 @@ hr {
         width: 100%;
     }
 }
+
+
+/* testimonials */
 
 .testimonials-area .testmonial-item .rating i {
     font-size: 15px;
@@ -3646,6 +3771,7 @@ hr {
 .testimonials-area .testmonial-nav button i {
     cursor: pointer;
     color: #1d2547;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
     display: block;
     padding: 20px;
@@ -3712,6 +3838,7 @@ hr {
     position: absolute;
     top: 193%;
     color: #1d2547;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     border: none;
     font-size: 21px;
@@ -3720,12 +3847,15 @@ hr {
 }
 
 .testimonials-area .testmonial-thumb img {
+    -webkit-transform: scale(0.6);
     transform: scale(0.6);
+    -webkit-transition: 0.6s;
     transition: 0.6s;
     opacity: 0.4;
 }
 
 .testimonials-area .testmonial-thumb.slick-center img {
+    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
 }
@@ -3887,8 +4017,6 @@ hr {
 
 .home-blog-area .home-blog-single {
     -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -3900,9 +4028,8 @@ hr {
 .home-blog-area .home-blog-single .blog-img-cap .blog-img img {
     width: 100%;
     -webkit-transform: scale 1;
-    -moz-transform: scale 1;
-    -ms-transform: scale 1;
     transform: scale 1;
+    -webkit-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
 }
 
@@ -3910,8 +4037,6 @@ hr {
     background: #fff;
     padding: 22px 29px 11px 9px;
     -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -3994,10 +4119,12 @@ hr {
 
 .home-blog-single:hover .blog-img-cap .blog-img img {
     -webkit-transform: scale(1.04);
-    -moz-transform: scale(1.04);
-    -ms-transform: scale(1.04);
     transform: scale(1.04);
 }
+
+
+/* Start Blog Area css
+============================================================================================ */
 
 .latest-blog-area .area-heading {
     margin-bottom: 70px;
@@ -4006,6 +4133,7 @@ hr {
 .blog_area a {
     color: 'Raleway', sans-serif !important;
     text-decoration: none;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -4015,6 +4143,7 @@ hr {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
 }
 
@@ -4024,6 +4153,7 @@ hr {
 }
 
 .single-blog:hover {
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(42, 34, 123, 0.1);
     box-shadow: 0px 10px 20px 0px rgba(42, 34, 123, 0.1);
 }
 
@@ -4042,8 +4172,6 @@ hr {
     background: #000;
     opacity: 0;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -4129,13 +4257,12 @@ hr {
 .single-blog:hover .thumb:after {
     opacity: 0.7;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
 @media (max-width: 1199px) {
     .single-blog h4 {
+        -webkit-transition: all 300ms linear 0s;
         transition: all 300ms linear 0s;
         border-bottom: 1px solid #dfdfdf;
         padding-bottom: 14px;
@@ -4157,8 +4284,6 @@ hr {
     opacity: 0;
     visibility: hidden;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -4170,8 +4295,6 @@ hr {
 
 .full_image.single-blog h4 {
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
     border-bottom: none;
     padding-bottom: 5px;
@@ -4190,10 +4313,16 @@ hr {
     opacity: 1;
     visibility: visible;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
+
+
+/* End Blog Area css
+============================================================================================ */
+
+
+/* Latest Blog Area css
+============================================================================================ */
 
 .l_blog_item .l_blog_text .date {
     margin-top: 24px;
@@ -4210,8 +4339,6 @@ hr {
     margin-bottom: 0px;
     padding-bottom: 20px;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -4219,6 +4346,14 @@ hr {
     margin-bottom: 0px;
     padding-top: 20px;
 }
+
+
+/* End Latest Blog Area css
+============================================================================================ */
+
+
+/* Causes Area css
+============================================================================================ */
 
 .causes_slider .owl-dots {
     text-align: center;
@@ -4306,6 +4441,13 @@ hr {
     font-size: 14px;
 }
 
+
+/* End Causes Area css
+============================================================================================ */
+
+
+/*================= latest_blog_area css =============*/
+
 .latest_blog_area {
     background: #f9f9ff;
 }
@@ -4319,6 +4461,7 @@ hr {
 }
 
 .single-recent-blog-post .thumb img {
+    -webkit-transition: all 0.7s linear;
     transition: all 0.7s linear;
 }
 
@@ -4329,6 +4472,7 @@ hr {
 .single-recent-blog-post .details .sec_h4 {
     line-height: 24px;
     padding: 10px 0px 13px;
+    -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 
@@ -4339,6 +4483,7 @@ hr {
 }
 
 .single-recent-blog-post:hover img {
+    -webkit-transform: scale(1.23) rotate(10deg);
     transform: scale(1.23) rotate(10deg);
 }
 
@@ -4355,6 +4500,9 @@ hr {
 .tags .tag_btn+.tag_btn {
     margin-left: 2px;
 }
+
+
+/*========= blog_categorie_area css ===========*/
 
 .blog_categorie_area {
     padding-top: 30px;
@@ -4393,9 +4541,16 @@ hr {
     bottom: 20px;
     background: rgba(34, 34, 34, 0.75);
     color: #fff;
+    -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -4426,12 +4581,16 @@ hr {
     background: rgba(222, 99, 32, 0.85);
 }
 
+
+/*============ blog_left_sidebar css ==============*/
+
 .blog_item {
     margin-bottom: 50px;
 }
 
 .blog_details {
     padding: 30px 0 20px 10px;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3);
     box-shadow: 0px 10px 20px 0px rgba(221, 221, 221, 0.3);
 }
 
@@ -4579,6 +4738,18 @@ hr {
     border-right: 0;
 }
 
+.blog_right_sidebar .search_widget .form-control::-webkit-input-placeholder {
+    color: #999999;
+}
+
+.blog_right_sidebar .search_widget .form-control:-ms-input-placeholder {
+    color: #999999;
+}
+
+.blog_right_sidebar .search_widget .form-control::-ms-input-placeholder {
+    color: #999999;
+}
+
 .blog_right_sidebar .search_widget .form-control::placeholder {
     color: #999999;
 }
@@ -4586,6 +4757,7 @@ hr {
 .blog_right_sidebar .search_widget .form-control:focus {
     border-color: #f0e9ff;
     outline: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -4616,6 +4788,18 @@ hr {
     border-radius: 0;
 }
 
+.blog_right_sidebar .newsletter_widget .form-control::-webkit-input-placeholder {
+    color: #999999;
+}
+
+.blog_right_sidebar .newsletter_widget .form-control:-ms-input-placeholder {
+    color: #999999;
+}
+
+.blog_right_sidebar .newsletter_widget .form-control::-ms-input-placeholder {
+    color: #999999;
+}
+
 .blog_right_sidebar .newsletter_widget .form-control::placeholder {
     color: #999999;
 }
@@ -4623,6 +4807,7 @@ hr {
 .blog_right_sidebar .newsletter_widget .form-control:focus {
     border-color: #f0e9ff;
     outline: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
 }
 
@@ -4642,6 +4827,7 @@ hr {
 
 .blog_right_sidebar .post_category_widget .cat-list li {
     border-bottom: 1px solid #f0e9ff;
+    -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     padding-bottom: 12px;
 }
@@ -4665,7 +4851,11 @@ hr {
 }
 
 .blog_right_sidebar .popular_post_widget .post_item .media-body {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
     padding-left: 20px;
 }
@@ -4674,6 +4864,7 @@ hr {
     font-size: 16px;
     line-height: 20px;
     margin-bottom: 6px;
+    -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 
@@ -4702,6 +4893,7 @@ hr {
     padding: 4px 20px;
     margin-bottom: 8px;
     margin-right: 3px;
+    -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     color: #888888;
     font-size: 13px;
@@ -4717,6 +4909,8 @@ hr {
 }
 
 .blog_right_sidebar .instagram_feeds .instagram_row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-right: -6px;
     margin-left: -6px;
@@ -4733,7 +4927,7 @@ hr {
 .blog_right_sidebar .br {
     width: 100%;
     height: 1px;
-    background: #eee;
+    background: #eeeeee;
     margin: 30px 0px;
 }
 
@@ -4772,7 +4966,11 @@ hr {
     margin-right: 0;
 }
 
+
+/*============ Start Blog Single Styles  =============*/
+
 .single-post-area .blog_details {
+    -webkit-box-shadow: none;
     box-shadow: none;
     padding: 0;
 }
@@ -4790,6 +4988,7 @@ hr {
     color: #cccccc;
     padding: 7px;
     font-size: 14px;
+    -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
 
@@ -4957,8 +5156,6 @@ hr {
 
 .single-post-area .navigation-area .nav-left .thumb img {
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -4966,8 +5163,6 @@ hr {
     margin-left: 20px;
     opacity: 0;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -4996,8 +5191,6 @@ hr {
 
 .single-post-area .navigation-area .nav-right .thumb img {
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -5005,8 +5198,6 @@ hr {
     margin-right: 20px;
     opacity: 0;
     -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
 }
 
@@ -5151,12 +5342,40 @@ hr {
 
 .comment-form .form-control:focus {
     outline: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+.comment-form .form-control::-webkit-input-placeholder {
+    font-weight: 300;
+    color: #999999;
+}
+
+.comment-form .form-control:-ms-input-placeholder {
+    font-weight: 300;
+    color: #999999;
+}
+
+.comment-form .form-control::-ms-input-placeholder {
+    font-weight: 300;
+    color: #999999;
 }
 
 .comment-form .form-control::placeholder {
     font-weight: 300;
     color: #999999;
+}
+
+.comment-form .form-control::-webkit-input-placeholder {
+    color: #777777;
+}
+
+.comment-form .form-control:-ms-input-placeholder {
+    color: #777777;
+}
+
+.comment-form .form-control::-ms-input-placeholder {
+    color: #777777;
 }
 
 .comment-form .form-control::placeholder {
@@ -5170,30 +5389,37 @@ hr {
 }
 
 .comment-form ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
     font-size: 13px;
     color: #777;
 }
 
 .comment-form ::-moz-placeholder {
+    /* Firefox 19+ */
     font-size: 13px;
     color: #777;
 }
 
 .comment-form :-ms-input-placeholder {
+    /* IE 10+ */
     font-size: 13px;
     color: #777;
 }
 
 .comment-form :-moz-placeholder {
+    /* Firefox 18- */
     font-size: 13px;
     color: #777;
 }
 
+
+/*============ End Blog Single Styles  =============*/
+
+
+/*=================== contact banner start ====================*/
+
 .dropdown .dropdown-menu {
     -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -5226,6 +5452,12 @@ hr {
     color: #8a8a8a;
 }
 
+
+/*=================== contact banner end ====================*/
+
+
+/*=================== contact form start ====================*/
+
 .contact-title {
     font-size: 27px;
     font-weight: 600;
@@ -5251,7 +5483,23 @@ hr {
 
 .form-contact .form-control:focus {
     outline: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+.form-contact .form-control::-webkit-input-placeholder {
+    font-weight: 300;
+    color: #999999;
+}
+
+.form-contact .form-control:-ms-input-placeholder {
+    font-weight: 300;
+    color: #999999;
+}
+
+.form-contact .form-control::-ms-input-placeholder {
+    font-weight: 300;
+    color: #999999;
 }
 
 .form-contact .form-control::placeholder {
@@ -5264,10 +5512,18 @@ hr {
     height: 100% !important;
 }
 
+
+/*=================== contact form end ====================*/
+
+
+/* Contact Success and error Area css
+============================================================================================ */
+
 .modal-message .modal-dialog {
     position: absolute;
     top: 36%;
     left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%) !important;
     transform: translateX(-50%) translateY(-50%) !important;
     margin: 0px;
     max-width: 500px;
@@ -5419,7 +5675,9 @@ hr {
 .popup_box .nice-select {
     -webkit-tap-highlight-color: transparent;
     background-color: #fff;
+    /* border-radius: 5px; */
     border: solid 1px #e2e2e2;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     clear: both;
     cursor: pointer;
@@ -5428,6 +5686,7 @@ hr {
     font-family: 'Muli', sans-serif;
     font-weight: normal;
     width: 100% !important;
+    /* height: 42px; */
     line-height: 50px;
     outline: none;
     padding-left: 18px;
@@ -5459,6 +5718,7 @@ hr {
     position: absolute;
     right: 17px;
     top: 3px;
+    -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
     width: 5px;
     font-family: fontawesome;
@@ -5470,7 +5730,6 @@ hr {
     opacity: 1;
     pointer-events: auto;
     -webkit-transform: scale(1) translateY(0);
-    -ms-transform: scale(1) translateY(0);
     transform: scale(1) translateY(0);
     height: 200px;
     overflow-y: scroll;
@@ -5489,8 +5748,6 @@ hr {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -5501,8 +5758,6 @@ hr {
         width: 100%;
         height: 100%;
         -webkit-transform: none;
-        -moz-transform: none;
-        -ms-transform: none;
         transform: none;
     }
 }
@@ -5536,7 +5791,9 @@ hr {
     outline: none;
     padding: 0;
     z-index: 1046;
+    -webkit-box-shadow: none;
     box-shadow: none;
+    -ms-touch-action: manipulation;
     touch-action: manipulation;
     width: 40px;
     height: 40px;
@@ -5591,23 +5848,27 @@ hr {
 }
 
 .overlay2::before {
-    background-image: -moz-linear-gradient( 170deg, rgba(34, 34, 34, 0) 0%, #000 100%);
-    background-image: -webkit-linear-gradient( 170deg, rgba(34, 34, 34, 0) 0%, #000 100%);
-    background-image: -ms-linear-gradient( 170deg, rgba(34, 34, 34, 0) 0%, #000 100%);
+    background-image: -ms-linear-gradient( 170deg, rgba(34, 34, 34, 0) 0%, black 100%);
 }
 
 .hero-overly::before {
-    background: -moz-linear-gradient( left, rgba(29, 37, 70, 0.78) 0%, rgba(30, 38, 72, 0.77) 1%, rgba(30, 38, 72, 0.74) 3%, rgba(30, 38, 72, 0.73) 4%, rgba(30, 38, 72, 0.7) 6%, rgba(30, 38, 72, 0.66) 9%, rgba(30, 38, 72, 0.64) 11%, rgba(30, 38, 71, 0.63) 12%, rgba(30, 38, 72, 0.6) 14%, rgba(30, 38, 72, 0.59) 15%, rgba(29, 38, 72, 0.58) 16%, rgba(30, 37, 72, 0.57) 17%, rgba(29, 38, 72, 0.56) 18%, rgba(30, 37, 70, 0.55) 19%, rgba(29, 36, 70, 0.54) 20%, rgba(30, 38, 72, 0.53) 21%, rgba(30, 38, 72, 0.52) 22%, rgba(31, 39, 71, 0.51) 23%, rgba(29, 37, 70, 0.5) 24%, rgba(30, 39, 71, 0.49) 25%, rgba(29, 37, 70, 0.48) 26%, rgba(30, 39, 71, 0.47) 27%, rgba(30, 37, 73, 0.46) 28%, rgba(29, 39, 73, 0.45) 29%, rgba(27, 37, 70, 0.44) 30%, rgba(31, 39, 72, 0.43) 31%, rgba(29, 36, 70, 0.42) 32%, rgba(30, 38, 71, 0.41) 33%, rgba(31, 37, 71, 0.4) 34%, rgba(30, 39, 71, 0.39) 35%, rgba(31, 37, 71, 0.38) 36%, rgba(29, 38, 73, 0.37) 37%, rgba(30, 36, 73, 0.36) 38%, rgba(31, 38, 73, 0.35) 39%, rgba(29, 36, 69, 0.33) 40%, rgba(30, 38, 72, 0.32) 41%, rgba(28, 36, 73, 0.3) 42%, rgba(29, 37, 70, 0.28) 43%, rgba(27, 36, 72, 0.27) 44%, rgba(28, 38, 71, 0.26) 45%, rgba(30, 40, 70, 0.24) 46%, rgba(27, 38, 71, 0.22) 47%, rgba(28, 40, 74, 0.21) 48%, rgba(31, 37, 68, 0.2) 49%, rgba(27, 34, 67, 0.18) 50%, rgba(29, 36, 73, 0.16) 51%, rgba(25, 33, 74, 0.15) 52%, rgba(35, 35, 70, 0.14) 53%, rgba(29, 39, 69, 0.12) 54%, rgba(23, 35, 70, 0.11) 55%, rgba(27, 40, 81, 0.09) 56%, rgba(34, 34, 68, 0.08) 57%, rgba(39, 39, 78, 0.06) 58%, rgba(28, 28, 57, 0.05) 59%, rgba(42, 42, 85, 0.03) 60%, rgba(85, 85, 85, 0.02) 61%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0) 100%);
-    background: -webkit-linear-gradient( left, rgba(29, 37, 70, 0.78) 0%, rgba(30, 38, 72, 0.77) 1%, rgba(30, 38, 72, 0.74) 3%, rgba(30, 38, 72, 0.73) 4%, rgba(30, 38, 72, 0.7) 6%, rgba(30, 38, 72, 0.66) 9%, rgba(30, 38, 72, 0.64) 11%, rgba(30, 38, 71, 0.63) 12%, rgba(30, 38, 72, 0.6) 14%, rgba(30, 38, 72, 0.59) 15%, rgba(29, 38, 72, 0.58) 16%, rgba(30, 37, 72, 0.57) 17%, rgba(29, 38, 72, 0.56) 18%, rgba(30, 37, 70, 0.55) 19%, rgba(29, 36, 70, 0.54) 20%, rgba(30, 38, 72, 0.53) 21%, rgba(30, 38, 72, 0.52) 22%, rgba(31, 39, 71, 0.51) 23%, rgba(29, 37, 70, 0.5) 24%, rgba(30, 39, 71, 0.49) 25%, rgba(29, 37, 70, 0.48) 26%, rgba(30, 39, 71, 0.47) 27%, rgba(30, 37, 73, 0.46) 28%, rgba(29, 39, 73, 0.45) 29%, rgba(27, 37, 70, 0.44) 30%, rgba(31, 39, 72, 0.43) 31%, rgba(29, 36, 70, 0.42) 32%, rgba(30, 38, 71, 0.41) 33%, rgba(31, 37, 71, 0.4) 34%, rgba(30, 39, 71, 0.39) 35%, rgba(31, 37, 71, 0.38) 36%, rgba(29, 38, 73, 0.37) 37%, rgba(30, 36, 73, 0.36) 38%, rgba(31, 38, 73, 0.35) 39%, rgba(29, 36, 69, 0.33) 40%, rgba(30, 38, 72, 0.32) 41%, rgba(28, 36, 73, 0.3) 42%, rgba(29, 37, 70, 0.28) 43%, rgba(27, 36, 72, 0.27) 44%, rgba(28, 38, 71, 0.26) 45%, rgba(30, 40, 70, 0.24) 46%, rgba(27, 38, 71, 0.22) 47%, rgba(28, 40, 74, 0.21) 48%, rgba(31, 37, 68, 0.2) 49%, rgba(27, 34, 67, 0.18) 50%, rgba(29, 36, 73, 0.16) 51%, rgba(25, 33, 74, 0.15) 52%, rgba(35, 35, 70, 0.14) 53%, rgba(29, 39, 69, 0.12) 54%, rgba(23, 35, 70, 0.11) 55%, rgba(27, 40, 81, 0.09) 56%, rgba(34, 34, 68, 0.08) 57%, rgba(39, 39, 78, 0.06) 58%, rgba(28, 28, 57, 0.05) 59%, rgba(42, 42, 85, 0.03) 60%, rgba(85, 85, 85, 0.02) 61%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0) 100%);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1d2546+0,1d2446+1,1e2648+1,1d2446+1,1e2648+1,1c2447+3,1e2647+3,1c2447+3,1e2648+3,1c2446+3,1e2648+3,1e2648+4,1c2546+6,1e2648+6,1c2546+6,1e2648+6,1c2546+9,1e2548+9,1c2546+9,1e2648+9,1e2548+11,1c2546+11,1e2648+11,1c2447+12,1e2648+12,1c2447+12,1e2648+12,1c2447+12,1e2647+12,1e2648+14,1c2447+14,1e2647+14,1c2447+14,1e2648+14,1c2546+15,1e2648+15,1d2648+16,1d2446+16,1d2648+16,1e2648+17,1c2546+17,1e2548+17,1d2646+18,1f2648+18,1d2446+18,1d2648+18,1d2447+19,1d2748+19,1e2546+19,1c2448+20,1e2648+20,1c2446+20,1e2648+20,1d2446+20,1e2648+20,1d2446+20,1e2648+20,1d2446+20,1e2648+21,1e2647+22,1c2448+22,1e2648+22,1c2446+22,1e2648+22,1c2446+23,1e2648+23,1c2446+23,1e2648+23,1c2447+23,1f2747+23,1d2546+24,1d2546+24,1d2549+24,1d2546+24,1d2549+24,1d2546+24,1e2648+25,1e2446+25,1e2648+25,1e2446+25,1e2648+25,1e2446+25,1e2648+25,1c2447+25,1e2648+25,1c2447+25,1e2749+25,1c2447+25,1e2747+25,1c2547+25,1e2747+25,1c2548+26,1f2548+26,1c2546+26,1f2548+26,1d2546+26,1f2549+26,1d2546+26,1f2549+26,1d2546+26,1d2648+27,1d2446+27,1d2648+27,1d2446+27,1d2648+27,1d2446+27,1d2648+27,1e2447+27,1e2749+27,1e2447+27,1e2747+27,1e2548+28,1c2546+28,1e2548+28,1c2546+28,1e2549+28,1c2546+28,1e2549+28,1c2647+28,1e2549+28,1c2647+29,1f2647+29,1c2647+29,1f2647+29,1d2447+29,1f2647+29,1d2446+29,1d2648+29,1d2446+29,1d2648+29,1d2446+29,1d2648+29,1d2446+29,1d2749+29,1d2446+30,1d2749+30,1d2746+30,1e2548+30,1b2546+30,1e2548+30,1b2546+30,1e2548+31,1e2647+31,1c2447+31,1e2647+31,1c2447+31,1f2647+31,1c2448+31,1f2647+31,1c2446+31,1f2748+31,1c2446+31,1f2748+31,1d2446+32,1f2748+32,1d2446+32,1f2749+32,1d2446+32,1d2749+32,1d2446+32,1e2649+33,1e2347+33,1e2647+33,1b2447+33,1e2647+33,1b2447+33,1e2647+33,1c2448+34,1e2748+34,1c2445+34,1e2748+34,1c2446+34,1e2748+34,1c2446+34,1f2749+34,1c2446+34,1f2749+34,1c2547+34,1f2449+34,1c2547+34,1f2547+34,1c2547+34,1f2547+34,1d2646+35,1d2649+35,1d2346+35,1e2747+35,1e2448+36,1e2748+36,1e2445+36,1e2748+36,1b2446+36,1e2748+36,1b2446+36,1e2749+36,1b2446+36,1e2749+36,1c2547+36,1e2449+36,1c2547+36,1f2547+36,1c2548+37,1f2547+37,1c2548+37,1f2548+37,1c2648+37,1f2548+37,1c2645+37,1f2648+37,1c2645+37,1f2648+37,1d2646+37,1d2649+37,1d2346+37,1d2649+37,1d2646+38,1d2447+38,1d2747+38,1d2448+38,1d2747+38,1d2448+38,1d2748+38,1d2448+38,1d2748+38,1e2446+38,1d2748+38,1e2446+38,1e2849+38,1e2446+38,1e2449+38,1e2546+39,1e254a+39,1b2546+39,1e2546+39,1b2547+39,1f2547+39,1b2547+39,1f2547+39,1c2648+39,1f2648+39,1c2645+39,1f2648+39,1c2646+39,1f2648+39,1c2346+39,1f2649+39,1c2346+40,1f2649+40,1c2347+40,1f2646+40,1c2347+40,202747+40,1c2347+40,202747+40,1d2448+40,1c2747+40,1d2448+40,1d2848+40,1d2448+40,1d2848+40,1d2445+40,1d2848+40,1d2445+40,1d2849+40,1d2445+40,1d2449+41,1e2546+41,1e254a+41,1e2546+41,1e2648+41,1b2645+41,1e2648+41,1b2746+42,1e2648+42,1b2346+42,1f2749+42,1b2346+42,1f2749+42,1b2347+42,1f2749+42,1b2347+42,1f2747+42,1b2347+42,1f2747+42,1c2448+42,1f2747+42,1c2448+42,202848+42,1c2448+42,202848+42,1c2449+42,202848+43,1c2445+43,202849+43,1c2445+43,1c2449+43,1d2546+43,1d254a+43,1d2546+43,1d254a+43,1d2546+43,1e2648+44,1e2345+44,1e2648+44,1e2345+44,1e2749+44,1e2345+44,1e2749+44,1f2346+44,1e2749+44,1a2346+44,1f2846+44,1a2346+44,1f2846+44,1b2448+44,1f2846+44,1b2448+44,1f2848+45,1b2448+45,1f2848+45,1b2449+45,1f2848+45,1b2444+45,202449+45,1b2444+45,202449+45,1c2546+45,202449+45,1c2546+45,20254a+45,1c2546+45,20254a+45,1c2647+45,202546+45,1c2647+45,212647+45,1c2647+45,1d2648+46,1d2245+46,1d2648+46,1d2245+46,1d274a+46,1d2245+46,1d274a+46,1e2346+46,1d274a+46,1e2346+46,1e284b+46,1e2346+46,1e2846+46,1f2447+47,1e2846+47,1f2447+47,1f2947+47,1f2447+47,1f2947+47,1a2449+47,1f2947+47,1a2449+47,1f2449+47,1a2444+47,1f2449+47,1b2545+47,1f2449+47,1b2545+47,20254a+47,1b2545+47,20254a+47,1b2647+47,20254a+48,1b2647+48,212647+48,1b2647+48,212647+48,1c2748+48,212647+48,1c2748+48,212748+48,1c2748+48,212748+48,1c224a+48,212748+48,1c2244+48,1c284a+48,1c2244+48,1c284a+48,1d2346+48,1c284a+48,1d2346+49,1d294b+49,1d2346+49,1d2946+49,1e2447+49,1d2946+49,1e2447+49,1e2a47+49,1e2447+49,1e2a47+49,1e2449+49,1e2449+49,1e2443+49,1e2449+49,1f2544+49,1e2449+49,1f2544+49,1f254b+50,1f2544+50,1f254b+50,1a2646+50,1f254b+50,1a2646+50,202646+50,1a2646+50,202646+50,1a2748+50,202646+50,1a2748+50,212748+50,1a2148+50,212748+50,1b224a+50,212748+50,1b2243+50,22284a+50,1b2243+50,22284a+51,1c2245+51,22284a+51,1c2245+51,22294c+51,1c2245+51,22294c+51,1c2347+51,1c2945+51,1c2347+51,1c2b47+51,1c2347+51,1c2b47+51,1d2449+51,1c2347+51,1d2449+51,1e2543+52,1d2449+52,1e2543+52,1e254b+52,1e2543+52,1e254b+52,1f2746+52,1e254b+52,1f2746+52,1f274d+52,1f2746+52,202848+52,182048+52,202848+52,19214a+52,202848+53,19214a+53,21294a+53,192142+53,21294a+53,1a2244+53,21294a+53,1a2244+53,222a4c+53,1a2244+53,222a4c+53,1a2346+53,222a4c+53,1a2346+53,232c46+53,1a2346+53,232c46+53,1b2449+53,232346+53,1b2449+54,242449+54,1b2449+54,242449+54,1c2642+54,1b2449+54,1c2642+54,1c264c+54,1c2642+54,1c264c+54,1d2745+54,1c264c+54,1d2745+54,1d274e+54,1d2745+54,1f2947+55,1f1f47+55,1f2947+55,20204a+55,1f2947+55,20204a+55,202a4a+55,202040+55,202a4a+55,212143+55,202a4a+55,162143+55,212c4e+55,162143+55,212c4e+55,172346+55,212c4e+55,172346+55,232e46+55,172346+55,232346+56,182449+56,232346+56,182449+56,242449+56,182449+56,242449+56,1a264d+56,242449+56,1a2640+56,26264d+56,1a2640+56,26264d+56,1b2843+56,26264d+56,1b2843+56,282851+56,1b2843+56,1b2851+56,1c2b47+57,1b2843+57,1c1c47+57,1c2b47+57,1c1c47+57,1c2b47+57,1e1e4b+57,1c2b47+57,1e1e4b+57,1e2d4b+57,1e1e4b+57,1e2d4b+57,202040+57,1e2d4b+57,202040+57,203050+57,202040+57,203050+57,222244+57,203050+58,222244+58,223355+58,222244+58,222244+58,242449+58,222244+58,122449+58,242449+58,122449+58,242449+58,14274e+58,242449+58,14273b+58,27274e+58,14273b+58,27274e+58,152a40+58,27274e+58,152a40+59,2a2a55+59,152a40+59,2a2a55+59,172e46+59,2a2a40+59,171746+59,2e2e46+59,171746+59,2e2e46+59,1a1a4d+59,2e2e46+59,1a1a4d+59,1a334d+59,1a1a4d+59,1a334d+59,1c1c39+59,1a334d+59,1c1c39+59,1c3955+60,1c1c39+60,1c3955+60,202040+60,1c3955+60,202040+60,204060+60,202040+60,202040+60,242449+60,202040+60,242449+60,242449+60,2a2a55+60,242449+60,2a2a55+60,2a2a55+60,2a2a2a+61,2a2a55+61,003333+61,2a2a55+61,003333+61,333366+61,003333+61,333366+61,000040+61,333366+61,000040+61,404040+61,000040+61,404040+61,000055+61,404040+61,000055+61,555555+61,000055+61,555555+61,000080+62,555555+62,000000+62,808080+62,000000+62,808080+62,000000+62,808080+62,000000+62,0000ff+62,000000+62,0000ff+62,000000+62,000000+100&0.78+0,0+62,0+100 */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient( linear, left top, right top, from(rgba(29, 37, 70, 0.78)), color-stop(1%, rgba(30, 38, 72, 0.77)), color-stop(3%, rgba(30, 38, 72, 0.74)), color-stop(4%, rgba(30, 38, 72, 0.73)), color-stop(6%, rgba(30, 38, 72, 0.7)), color-stop(9%, rgba(30, 38, 72, 0.66)), color-stop(11%, rgba(30, 38, 72, 0.64)), color-stop(12%, rgba(30, 38, 71, 0.63)), color-stop(14%, rgba(30, 38, 72, 0.6)), color-stop(15%, rgba(30, 38, 72, 0.59)), color-stop(16%, rgba(29, 38, 72, 0.58)), color-stop(17%, rgba(30, 37, 72, 0.57)), color-stop(18%, rgba(29, 38, 72, 0.56)), color-stop(19%, rgba(30, 37, 70, 0.55)), color-stop(20%, rgba(29, 36, 70, 0.54)), color-stop(21%, rgba(30, 38, 72, 0.53)), color-stop(22%, rgba(30, 38, 72, 0.52)), color-stop(23%, rgba(31, 39, 71, 0.51)), color-stop(24%, rgba(29, 37, 70, 0.5)), color-stop(25%, rgba(30, 39, 71, 0.49)), color-stop(26%, rgba(29, 37, 70, 0.48)), color-stop(27%, rgba(30, 39, 71, 0.47)), color-stop(28%, rgba(30, 37, 73, 0.46)), color-stop(29%, rgba(29, 39, 73, 0.45)), color-stop(30%, rgba(27, 37, 70, 0.44)), color-stop(31%, rgba(31, 39, 72, 0.43)), color-stop(32%, rgba(29, 36, 70, 0.42)), color-stop(33%, rgba(30, 38, 71, 0.41)), color-stop(34%, rgba(31, 37, 71, 0.4)), color-stop(35%, rgba(30, 39, 71, 0.39)), color-stop(36%, rgba(31, 37, 71, 0.38)), color-stop(37%, rgba(29, 38, 73, 0.37)), color-stop(38%, rgba(30, 36, 73, 0.36)), color-stop(39%, rgba(31, 38, 73, 0.35)), color-stop(40%, rgba(29, 36, 69, 0.33)), color-stop(41%, rgba(30, 38, 72, 0.32)), color-stop(42%, rgba(28, 36, 73, 0.3)), color-stop(43%, rgba(29, 37, 70, 0.28)), color-stop(44%, rgba(27, 36, 72, 0.27)), color-stop(45%, rgba(28, 38, 71, 0.26)), color-stop(46%, rgba(30, 40, 70, 0.24)), color-stop(47%, rgba(27, 38, 71, 0.22)), color-stop(48%, rgba(28, 40, 74, 0.21)), color-stop(49%, rgba(31, 37, 68, 0.2)), color-stop(50%, rgba(27, 34, 67, 0.18)), color-stop(51%, rgba(29, 36, 73, 0.16)), color-stop(52%, rgba(25, 33, 74, 0.15)), color-stop(53%, rgba(35, 35, 70, 0.14)), color-stop(54%, rgba(29, 39, 69, 0.12)), color-stop(55%, rgba(23, 35, 70, 0.11)), color-stop(56%, rgba(27, 40, 81, 0.09)), color-stop(57%, rgba(34, 34, 68, 0.08)), color-stop(58%, rgba(39, 39, 78, 0.06)), color-stop(59%, rgba(28, 28, 57, 0.05)), color-stop(60%, rgba(42, 42, 85, 0.03)), color-stop(61%, rgba(85, 85, 85, 0.02)), color-stop(62%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
     background: linear-gradient( to right, rgba(29, 37, 70, 0.78) 0%, rgba(30, 38, 72, 0.77) 1%, rgba(30, 38, 72, 0.74) 3%, rgba(30, 38, 72, 0.73) 4%, rgba(30, 38, 72, 0.7) 6%, rgba(30, 38, 72, 0.66) 9%, rgba(30, 38, 72, 0.64) 11%, rgba(30, 38, 71, 0.63) 12%, rgba(30, 38, 72, 0.6) 14%, rgba(30, 38, 72, 0.59) 15%, rgba(29, 38, 72, 0.58) 16%, rgba(30, 37, 72, 0.57) 17%, rgba(29, 38, 72, 0.56) 18%, rgba(30, 37, 70, 0.55) 19%, rgba(29, 36, 70, 0.54) 20%, rgba(30, 38, 72, 0.53) 21%, rgba(30, 38, 72, 0.52) 22%, rgba(31, 39, 71, 0.51) 23%, rgba(29, 37, 70, 0.5) 24%, rgba(30, 39, 71, 0.49) 25%, rgba(29, 37, 70, 0.48) 26%, rgba(30, 39, 71, 0.47) 27%, rgba(30, 37, 73, 0.46) 28%, rgba(29, 39, 73, 0.45) 29%, rgba(27, 37, 70, 0.44) 30%, rgba(31, 39, 72, 0.43) 31%, rgba(29, 36, 70, 0.42) 32%, rgba(30, 38, 71, 0.41) 33%, rgba(31, 37, 71, 0.4) 34%, rgba(30, 39, 71, 0.39) 35%, rgba(31, 37, 71, 0.38) 36%, rgba(29, 38, 73, 0.37) 37%, rgba(30, 36, 73, 0.36) 38%, rgba(31, 38, 73, 0.35) 39%, rgba(29, 36, 69, 0.33) 40%, rgba(30, 38, 72, 0.32) 41%, rgba(28, 36, 73, 0.3) 42%, rgba(29, 37, 70, 0.28) 43%, rgba(27, 36, 72, 0.27) 44%, rgba(28, 38, 71, 0.26) 45%, rgba(30, 40, 70, 0.24) 46%, rgba(27, 38, 71, 0.22) 47%, rgba(28, 40, 74, 0.21) 48%, rgba(31, 37, 68, 0.2) 49%, rgba(27, 34, 67, 0.18) 50%, rgba(29, 36, 73, 0.16) 51%, rgba(25, 33, 74, 0.15) 52%, rgba(35, 35, 70, 0.14) 53%, rgba(29, 39, 69, 0.12) 54%, rgba(23, 35, 70, 0.11) 55%, rgba(27, 40, 81, 0.09) 56%, rgba(34, 34, 68, 0.08) 57%, rgba(39, 39, 78, 0.06) 58%, rgba(28, 28, 57, 0.05) 59%, rgba(42, 42, 85, 0.03) 60%, rgba(85, 85, 85, 0.02) 61%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c71d2546', endColorstr='#00000000', GradientType=1);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* IE6-9 */
 }
 
 .hero-overly2::before {
-    background: -moz-linear-gradient( left, rgba(29, 37, 70, 0.78) 0%, rgba(30, 38, 72, 0.64) 11%, rgba(30, 38, 72, 0.63) 12%, rgba(29, 36, 70, 0.62) 13%, rgba(30, 38, 72, 0.61) 14%, rgba(29, 38, 72, 0.58) 16%, rgba(30, 37, 72, 0.57) 17%, rgba(29, 36, 71, 0.56) 18%, rgba(28, 37, 71, 0.55) 19%, rgba(30, 38, 72, 0.54) 20%, rgba(28, 36, 70, 0.51) 22%, rgba(31, 37, 71, 0.5) 23%, rgba(30, 38, 72, 0.49) 24%, rgba(30, 39, 71, 0.48) 25%, rgba(29, 37, 70, 0.47) 26%, rgba(30, 39, 71, 0.46) 27%, rgba(31, 38, 71, 0.45) 28%, rgba(29, 39, 70, 0.44) 29%, rgba(30, 37, 72, 0.43) 30%, rgba(31, 39, 72, 0.42) 31%, rgba(29, 36, 70, 0.41) 32%, rgba(30, 39, 72, 0.4) 33%, rgba(31, 37, 71, 0.39) 34%, rgba(30, 36, 72, 0.38) 35%, rgba(31, 37, 71, 0.37) 36%, rgba(29, 36, 71, 0.36) 37%, rgba(30, 37, 70, 0.35) 38%, rgba(31, 38, 73, 0.34) 39%, rgba(29, 36, 73, 0.33) 40%, rgba(31, 39, 73, 0.32) 41%, rgba(28, 36, 69, 0.3) 42%, rgba(30, 38, 72, 0.28) 43%, rgba(27, 36, 73, 0.27) 44%, rgba(28, 38, 71, 0.26) 45%, rgba(31, 41, 71, 0.24) 46%, rgba(27, 38, 71, 0.22) 47%, rgba(29, 41, 75, 0.21) 48%, rgba(26, 38, 70, 0.2) 49%, rgba(28, 34, 69, 0.18) 50%, rgba(30, 37, 75, 0.16) 51%, rgba(25, 33, 66, 0.15) 52%, rgba(36, 36, 73, 0.14) 53%, rgba(32, 32, 74, 0.12) 54%, rgba(24, 36, 73, 0.11) 55%, rgba(28, 43, 71, 0.09) 56%, rgba(34, 34, 68, 0.08) 57%, rgba(42, 42, 85, 0.06) 58%, rgba(32, 32, 64, 0.05) 59%, rgba(42, 42, 85, 0.03) 60%, rgba(128, 128, 128, 0.02) 61%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0) 100%);
-    background: -webkit-linear-gradient( left, rgba(29, 37, 70, 0.78) 0%, rgba(30, 38, 72, 0.64) 11%, rgba(30, 38, 72, 0.63) 12%, rgba(29, 36, 70, 0.62) 13%, rgba(30, 38, 72, 0.61) 14%, rgba(29, 38, 72, 0.58) 16%, rgba(30, 37, 72, 0.57) 17%, rgba(29, 36, 71, 0.56) 18%, rgba(28, 37, 71, 0.55) 19%, rgba(30, 38, 72, 0.54) 20%, rgba(28, 36, 70, 0.51) 22%, rgba(31, 37, 71, 0.5) 23%, rgba(30, 38, 72, 0.49) 24%, rgba(30, 39, 71, 0.48) 25%, rgba(29, 37, 70, 0.47) 26%, rgba(30, 39, 71, 0.46) 27%, rgba(31, 38, 71, 0.45) 28%, rgba(29, 39, 70, 0.44) 29%, rgba(30, 37, 72, 0.43) 30%, rgba(31, 39, 72, 0.42) 31%, rgba(29, 36, 70, 0.41) 32%, rgba(30, 39, 72, 0.4) 33%, rgba(31, 37, 71, 0.39) 34%, rgba(30, 36, 72, 0.38) 35%, rgba(31, 37, 71, 0.37) 36%, rgba(29, 36, 71, 0.36) 37%, rgba(30, 37, 70, 0.35) 38%, rgba(31, 38, 73, 0.34) 39%, rgba(29, 36, 73, 0.33) 40%, rgba(31, 39, 73, 0.32) 41%, rgba(28, 36, 69, 0.3) 42%, rgba(30, 38, 72, 0.28) 43%, rgba(27, 36, 73, 0.27) 44%, rgba(28, 38, 71, 0.26) 45%, rgba(31, 41, 71, 0.24) 46%, rgba(27, 38, 71, 0.22) 47%, rgba(29, 41, 75, 0.21) 48%, rgba(26, 38, 70, 0.2) 49%, rgba(28, 34, 69, 0.18) 50%, rgba(30, 37, 75, 0.16) 51%, rgba(25, 33, 66, 0.15) 52%, rgba(36, 36, 73, 0.14) 53%, rgba(32, 32, 74, 0.12) 54%, rgba(24, 36, 73, 0.11) 55%, rgba(28, 43, 71, 0.09) 56%, rgba(34, 34, 68, 0.08) 57%, rgba(42, 42, 85, 0.06) 58%, rgba(32, 32, 64, 0.05) 59%, rgba(42, 42, 85, 0.03) 60%, rgba(128, 128, 128, 0.02) 61%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0) 100%);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1d2546+0,1e2548+11,1c2646+11,1e2548+11,1c2646+11,1e2648+11,1c2447+11,1e2648+11,1c2447+12,1e2647+12,1e2648+12,1d2648+13,1d2446+13,1e2648+14,1c2447+14,1e2647+14,1c2447+14,1e2648+14,1c2546+14,1e2648+14,1d2648+16,1d2446+16,1d2648+16,1e2648+17,1c2546+17,1e2648+17,1c2546+17,1e2548+17,1d2648+18,1d2446+18,1f2648+18,1d2446+18,1d2648+18,1d2447+18,1d2748+19,1e2546+19,1c2547+19,1e2549+19,1c2547+19,1c2648+20,1c2446+20,1e2648+20,1c2446+20,1e2648+20,1d2446+20,1e2648+20,1d2446+20,1e2648+20,1d2446+20,1e2648+20,1e2647+22,1c2448+22,1e2648+22,1c2446+22,1e2648+22,1c2446+22,1e2648+22,1c2446+22,1e2648+23,1c2446+23,1e2648+23,1c2447+23,1e2648+23,1c2447+23,1e2647+23,1c2447+23,1f2547+23,1d2546+24,1d2549+24,1d2546+24,1d2549+24,1d2546+24,1e2648+24,1e2446+24,1e2648+24,1e2446+25,1e2648+25,1e2446+25,1e2648+25,1c2446+25,1e2648+25,1c2447+25,1e2747+25,1c2447+25,1e2747+25,1c2547+25,1e2747+25,1c2546+26,1f2548+26,1c2546+26,1f2548+26,1d2546+26,1f2549+26,1d2546+26,1f2549+26,1d2546+26,1d2648+27,1d2446+27,1d2648+27,1d2446+27,1d2648+27,1d2446+27,1d2648+27,1e2447+27,1e2749+27,1e2447+27,1e2747+27,1e2548+28,1c2546+28,1e2548+28,1c2546+28,1e2549+28,1c2546+28,1e2549+28,1c2647+28,1e2549+28,1c2647+28,1f2647+28,1c2647+29,1f2647+29,1d2447+29,1f2647+29,1d2446+29,1d2648+29,1d2446+29,1d2648+29,1d2446+29,1d2648+29,1d2446+29,1d2749+29,1d2446+29,1d2746+29,1d2446+30,1e2548+30,1e2545+30,1e2548+30,1b2546+30,1e2548+30,1b2546+30,1e2548+30,1e2647+31,1c2347+31,1e2647+31,1c2447+31,1f2647+31,1c2448+31,1f2647+31,1c2446+31,1f2748+31,1c2446+31,1f2748+31,1d2446+31,1f2748+31,1d2446+32,1f2749+32,1d2446+32,1d2749+32,1d2446+32,1e2649+33,1e2347+33,1e2647+33,1b2447+33,1e2647+33,1b2447+33,1e2647+33,1b2447+33,1e2647+33,1c2445+33,1e2748+33,1c2445+34,1e2748+34,1c2446+34,1e2748+34,1c2446+34,1f2749+34,1c2446+34,1f2749+34,1c2547+34,1f2446+34,1c2547+34,1f2547+34,1c2547+34,1f2547+34,1d2648+35,1d2346+35,1d2649+35,1d2346+35,1e2747+35,1e2448+35,1e2747+36,1e2448+36,1e2748+36,1e2445+36,1e2748+36,1b2446+36,1e2748+36,1b2446+36,1e2749+36,1b2446+36,1e2449+36,1c2547+36,1e2449+36,1c2547+36,1f2547+36,1c2548+36,1f2547+36,1c2548+37,1f2548+37,1c2648+37,1f2548+37,1c2645+37,1f2648+37,1c2645+37,1f2648+37,1c2648+37,1d2346+37,1d2649+37,1d2346+37,1d2649+37,1d2447+37,1d2747+38,1d2447+38,1d2748+38,1d2445+38,1d2748+38,1e2446+38,1d2748+38,1e2446+38,1e2849+38,1e2446+38,1e2449+38,1e2546+38,1e2449+38,1e2546+38,1b2547+39,1e2546+39,1b2547+39,1f2547+39,1b2547+39,1f2547+39,1c2648+39,1f2547+39,1c2645+39,1f2648+39,1c2645+39,1f2648+39,1c2646+39,1f2648+39,1c2346+39,1f2649+39,1c2346+39,1f2649+39,1c2347+40,1f2646+40,1c2347+40,202747+40,1c2347+40,202747+40,1d2448+40,1c2747+40,1d2448+40,1d2848+40,1d2448+40,1d2848+40,1d2445+40,1d2848+40,1d2445+40,1d2849+40,1d2445+40,1d2449+40,1e2546+41,1e254a+41,1e2546+41,1e2648+41,1b2648+41,1e2648+41,1b2746+41,1e2648+41,1b2346+41,1f2749+41,1b2346+42,1f2749+42,1b2347+42,1f2749+42,1b2347+42,1f274b+42,1b2347+42,1f2747+42,1c2448+42,1f2747+42,1c2448+42,202848+42,1c2448+42,202848+42,1c2449+42,202848+42,1c2445+42,202849+42,1c2445+42,202449+43,1d2546+43,1c2449+43,1d2546+43,1d254a+43,1d2546+43,1d254a+43,1d2546+43,1e2648+43,1e2745+44,1e2648+44,1e2345+44,1e2749+44,1e2345+44,1e2749+44,1f2346+44,1e2749+44,1f2346+44,1f284b+44,1a2346+44,1f2846+44,1b2448+44,1f2846+44,1b2448+44,1f2848+44,1b2448+44,1f2848+44,1b2449+44,1f2848+45,1b2449+45,202949+45,1b2444+45,202449+45,1c2546+45,202449+45,1c2546+45,20254a+45,1c2546+45,20254a+45,1c2647+45,20254a+45,1c2647+45,212647+45,1c2647+45,1d274a+46,1d2245+46,1d274a+46,1d2245+46,1d274a+46,1e2346+46,1d274a+46,1e2346+46,1e284b+46,1e2346+46,1e284b+46,1f2447+46,1e2846+46,1f2447+46,1f2947+46,1f2447+47,1f2947+47,1f2449+47,1f2947+47,1a2449+47,1f2449+47,1a2444+47,1f2449+47,1b2545+47,1f2449+47,1b2545+47,20254a+47,1b2545+47,20254a+47,1b2647+47,20254a+47,1b2647+47,212647+47,1b2647+47,212647+48,1c2748+48,212647+48,1c2748+48,212748+48,1c2748+48,212748+48,1c224a+48,212748+48,1c2244+48,22284a+48,1c2244+48,1c284a+48,1d2346+48,1c284a+48,1d2346+48,1d294b+48,1d2346+48,1d294b+48,1e2447+49,1d2946+49,1e2447+49,1e2a47+49,1e2447+49,1e2a47+49,1e2449+49,1e2a47+49,1e2449+49,1e2449+49,1f2544+49,1e2449+49,1f2544+49,1f254b+49,1f2544+49,1f254b+49,1a2646+49,1f254b+50,1a2646+50,20264d+50,1a2646+50,202646+50,1a2748+50,202646+50,1a2748+50,212748+50,1a2748+50,212748+50,1b224a+50,212748+50,1b224a+50,22284a+50,1b2243+50,22284a+50,1c2245+50,22284a+50,1c2245+50,22294c+51,1c2245+51,22294c+51,1c2347+51,22294c+51,1c2347+51,1c2b47+51,1c2347+51,1c2b47+51,1d2449+51,1c2b47+51,1d2449+51,1d2449+51,1e2543+51,1d2449+51,1e2543+51,1e254b+51,1e2543+52,1e254b+52,1f2746+52,1e254b+52,1f2746+52,1f274d+52,1f2746+52,202848+52,19214a+52,202848+52,19214a+52,21294a+52,192142+52,21294a+53,1a2244+53,21294a+53,1a2244+53,222a4c+53,1a2244+53,222a4c+53,1a2346+53,222a4c+53,1a2346+53,232c46+53,1a2346+53,232c46+53,1b2449+53,232346+53,1b2449+53,242449+53,1b2449+53,242449+53,1c264c+54,1b2449+54,1c2642+54,1c264c+54,1c2642+54,1c264c+54,1d2745+54,1c264c+54,1d2745+54,1d274e+54,1d2745+54,1d274e+54,1f2947+54,1d2745+54,1f2947+54,1f1f47+54,1f2947+54,20204a+54,1f2947+55,20204a+55,202a4a+55,20204a+55,202a4a+55,212143+55,202a4a+55,212143+55,212c4e+55,162143+55,212c4e+55,172346+55,212c4e+55,172346+55,232e51+55,172346+55,232e46+55,182449+55,232346+55,182449+55,242449+56,182449+56,242449+56,1a264d+56,242449+56,1a2640+56,26264d+56,1a2640+56,26264d+56,1b2843+56,26264d+56,1b2843+56,282851+56,1b2843+56,282851+56,1c2b47+56,1b2843+56,1c2b47+56,1c2b47+56,1c1c47+57,1c2b47+57,1e1e4b+57,1c2b47+57,1e1e4b+57,1e2d4b+57,1e1e4b+57,1e2d4b+57,202040+57,1e2d4b+57,202040+57,203050+57,202040+57,203050+57,222244+57,203050+57,222244+57,223355+57,222244+57,223344+58,242449+58,222244+58,122449+58,242449+58,122449+58,242449+58,14274e+58,242449+58,14274e+58,27274e+58,14273b+58,27274e+58,152a40+58,27274e+58,152a40+58,2a2a55+58,152a40+58,2a2a55+58,172e46+59,2a2a55+59,171746+59,2e2e46+59,171746+59,2e2e46+59,1a1a4d+59,2e2e46+59,1a1a4d+59,33334d+59,1a1a4d+59,1a334d+59,1c1c55+59,1a334d+59,1c1c39+59,1c3955+59,1c1c39+59,1c3955+59,202040+59,1c3955+60,202040+60,204060+60,202040+60,202060+60,242449+60,202040+60,242449+60,242449+60,2a2a55+60,242449+60,2a2a55+60,2a2a55+60,2a2a2a+60,2a2a55+60,003333+60,2a2a55+60,003333+61,333366+61,003333+61,333366+61,004040+61,333366+61,000040+61,404040+61,000040+61,404040+61,000055+61,404040+61,000055+61,555555+61,000055+61,555555+61,000080+61,555555+61,000000+61,808080+61,000000+62,808080+62,000000+62,808080+62,000000+62,00ffff+62,000000+62,0000ff+62,000000+62,000000+100&0.78+0,0+62,0+100 */
+    /* FF3.6-15 */
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient( linear, left top, right top, from(rgba(29, 37, 70, 0.78)), color-stop(11%, rgba(30, 38, 72, 0.64)), color-stop(12%, rgba(30, 38, 72, 0.63)), color-stop(13%, rgba(29, 36, 70, 0.62)), color-stop(14%, rgba(30, 38, 72, 0.61)), color-stop(16%, rgba(29, 38, 72, 0.58)), color-stop(17%, rgba(30, 37, 72, 0.57)), color-stop(18%, rgba(29, 36, 71, 0.56)), color-stop(19%, rgba(28, 37, 71, 0.55)), color-stop(20%, rgba(30, 38, 72, 0.54)), color-stop(22%, rgba(28, 36, 70, 0.51)), color-stop(23%, rgba(31, 37, 71, 0.5)), color-stop(24%, rgba(30, 38, 72, 0.49)), color-stop(25%, rgba(30, 39, 71, 0.48)), color-stop(26%, rgba(29, 37, 70, 0.47)), color-stop(27%, rgba(30, 39, 71, 0.46)), color-stop(28%, rgba(31, 38, 71, 0.45)), color-stop(29%, rgba(29, 39, 70, 0.44)), color-stop(30%, rgba(30, 37, 72, 0.43)), color-stop(31%, rgba(31, 39, 72, 0.42)), color-stop(32%, rgba(29, 36, 70, 0.41)), color-stop(33%, rgba(30, 39, 72, 0.4)), color-stop(34%, rgba(31, 37, 71, 0.39)), color-stop(35%, rgba(30, 36, 72, 0.38)), color-stop(36%, rgba(31, 37, 71, 0.37)), color-stop(37%, rgba(29, 36, 71, 0.36)), color-stop(38%, rgba(30, 37, 70, 0.35)), color-stop(39%, rgba(31, 38, 73, 0.34)), color-stop(40%, rgba(29, 36, 73, 0.33)), color-stop(41%, rgba(31, 39, 73, 0.32)), color-stop(42%, rgba(28, 36, 69, 0.3)), color-stop(43%, rgba(30, 38, 72, 0.28)), color-stop(44%, rgba(27, 36, 73, 0.27)), color-stop(45%, rgba(28, 38, 71, 0.26)), color-stop(46%, rgba(31, 41, 71, 0.24)), color-stop(47%, rgba(27, 38, 71, 0.22)), color-stop(48%, rgba(29, 41, 75, 0.21)), color-stop(49%, rgba(26, 38, 70, 0.2)), color-stop(50%, rgba(28, 34, 69, 0.18)), color-stop(51%, rgba(30, 37, 75, 0.16)), color-stop(52%, rgba(25, 33, 66, 0.15)), color-stop(53%, rgba(36, 36, 73, 0.14)), color-stop(54%, rgba(32, 32, 74, 0.12)), color-stop(55%, rgba(24, 36, 73, 0.11)), color-stop(56%, rgba(28, 43, 71, 0.09)), color-stop(57%, rgba(34, 34, 68, 0.08)), color-stop(58%, rgba(42, 42, 85, 0.06)), color-stop(59%, rgba(32, 32, 64, 0.05)), color-stop(60%, rgba(42, 42, 85, 0.03)), color-stop(61%, rgba(128, 128, 128, 0.02)), color-stop(62%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
     background: linear-gradient( to right, rgba(29, 37, 70, 0.78) 0%, rgba(30, 38, 72, 0.64) 11%, rgba(30, 38, 72, 0.63) 12%, rgba(29, 36, 70, 0.62) 13%, rgba(30, 38, 72, 0.61) 14%, rgba(29, 38, 72, 0.58) 16%, rgba(30, 37, 72, 0.57) 17%, rgba(29, 36, 71, 0.56) 18%, rgba(28, 37, 71, 0.55) 19%, rgba(30, 38, 72, 0.54) 20%, rgba(28, 36, 70, 0.51) 22%, rgba(31, 37, 71, 0.5) 23%, rgba(30, 38, 72, 0.49) 24%, rgba(30, 39, 71, 0.48) 25%, rgba(29, 37, 70, 0.47) 26%, rgba(30, 39, 71, 0.46) 27%, rgba(31, 38, 71, 0.45) 28%, rgba(29, 39, 70, 0.44) 29%, rgba(30, 37, 72, 0.43) 30%, rgba(31, 39, 72, 0.42) 31%, rgba(29, 36, 70, 0.41) 32%, rgba(30, 39, 72, 0.4) 33%, rgba(31, 37, 71, 0.39) 34%, rgba(30, 36, 72, 0.38) 35%, rgba(31, 37, 71, 0.37) 36%, rgba(29, 36, 71, 0.36) 37%, rgba(30, 37, 70, 0.35) 38%, rgba(31, 38, 73, 0.34) 39%, rgba(29, 36, 73, 0.33) 40%, rgba(31, 39, 73, 0.32) 41%, rgba(28, 36, 69, 0.3) 42%, rgba(30, 38, 72, 0.28) 43%, rgba(27, 36, 73, 0.27) 44%, rgba(28, 38, 71, 0.26) 45%, rgba(31, 41, 71, 0.24) 46%, rgba(27, 38, 71, 0.22) 47%, rgba(29, 41, 75, 0.21) 48%, rgba(26, 38, 70, 0.2) 49%, rgba(28, 34, 69, 0.18) 50%, rgba(30, 37, 75, 0.16) 51%, rgba(25, 33, 66, 0.15) 52%, rgba(36, 36, 73, 0.14) 53%, rgba(32, 32, 74, 0.12) 54%, rgba(24, 36, 73, 0.11) 55%, rgba(28, 43, 71, 0.09) 56%, rgba(34, 34, 68, 0.08) 57%, rgba(42, 42, 85, 0.06) 58%, rgba(32, 32, 64, 0.05) 59%, rgba(42, 42, 85, 0.03) 60%, rgba(128, 128, 128, 0.02) 61%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#c71d2546', endColorstr='#00000000', GradientType=1);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /* IE6-9 */
 }
 
 .sample-text-area {
@@ -5666,8 +5927,6 @@ del {
     font-weight: 500;
     cursor: pointer;
     -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
 }
 
@@ -5882,7 +6141,7 @@ del {
 }
 
 .genric-btn.disable {
-    color: #222, 0.3;
+    color: #222222, 0.3;
     background: #f9f9ff;
     border: 1px solid transparent;
     cursor: not-allowed;
@@ -5923,6 +6182,8 @@ del {
 }
 
 .progress-table .table-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -5939,6 +6200,8 @@ del {
 .progress-table .table-row {
     padding: 15px 0;
     border-top: 1px solid #edf3fd;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -5946,7 +6209,11 @@ del {
 .progress-table .table-row .country,
 .progress-table .table-row .visit,
 .progress-table .table-row .percentage {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -6195,9 +6462,8 @@ del {
     border-radius: 50%;
     background: #140c40;
     -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
     transition: all 0.2s;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -6249,8 +6515,6 @@ del {
     border-radius: 8.5px;
     cursor: pointer;
     -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
     transition: all 0.2s;
 }
 
@@ -6264,9 +6528,8 @@ del {
     border-radius: 50%;
     background: #fff;
     -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
     transition: all 0.2s;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -6321,8 +6584,6 @@ del {
     background: transparent;
     border-radius: 8.5px;
     -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
     transition: all 0.2s;
     cursor: pointer;
 }
@@ -6337,9 +6598,8 @@ del {
     border-radius: 50%;
     background: #fff;
     -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
     transition: all 0.2s;
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -6607,6 +6867,7 @@ del {
     margin-top: 0;
     border: none;
     border-radius: 0px;
+    -webkit-box-shadow: none;
     box-shadow: none;
     width: 100%;
     padding: 10px 0 10px 0px;
@@ -6615,8 +6876,6 @@ del {
 .default-select .nice-select .list .option {
     font-weight: 300;
     -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     line-height: 28px;
     min-height: 28px;
@@ -6662,6 +6921,7 @@ del {
     margin-top: 0;
     border: none;
     border-radius: 0px;
+    -webkit-box-shadow: none;
     box-shadow: none;
     width: 100%;
     padding: 10px 0 10px 0px;
@@ -6670,8 +6930,6 @@ del {
 .form-select .nice-select .list .option {
     font-weight: 300;
     -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     line-height: 28px;
     min-height: 28px;
@@ -6718,3 +6976,6 @@ del {
 .switch-wrap {
     margin-bottom: 10px;
 }
+
+
+/*# sourceMappingURL=style.css.map */
