@@ -12,7 +12,8 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.</p>
+                                        <p>Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis
+                                            viverra ornare, eros dolor interdum nulla.</p>
                                     </div>
                                 </div>
                                 <!-- social -->
