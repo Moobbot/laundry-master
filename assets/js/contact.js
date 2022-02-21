@@ -1,3 +1,4 @@
+//Chưa hiểu nghiên cứu thêm
 $(document).ready(function() {
 
     (function($) {

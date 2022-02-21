@@ -1,290 +1,192 @@
-<?php include("./reuse/header.php") ?>
-<?php include("./reuse/menu.php") ?>
+<?php
+include('./reuse/header.php');
+include('./reuse/load_and_up.php');
+?>
+
+<?php include('./reuse/header_body.php'); ?>
+
 <main>
-    <!--? slider Area Start-->
-    <section class="slider-area hero-overly">
-        <div class="slider-active">
-            <!-- Single Slider -->
-            <div class="single-slider slider-height d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-7 col-lg-9 col-md-10 col-sm-9">
-                            <div class="hero__caption">
-                                <h1 data-animation="fadeInLeft" data-delay="0.2s">Quality laundry service in your city
-                                </h1>
-                                <p data-animation="fadeInLeft" data-delay="0.4s">We take care about cleenness of your
-                                    cloth</p>
-                                <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">Explore
-                                    Services</a>
+    <div class="main-area">
+        <!--* slider Area Start-->
+        <section class="slider-area hero-image-1 hero-overly">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height-1 d-flex align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-7 col-lg-9 col-md-10 col-sm-9">
+                                <div class="hero-text">
+                                    <h1>
+                                        ZALA - NỀN TẢNG KẾT NỐI GIẶT LÀ
+                                    </h1>
+                                    <p>
+                                        Hãy để chúng tôi trở thành một phần trong cuộc sống của bạn
+                                    </p>
+                                    <a href="#service" class="btn hero-btn">Khám phá ngay!</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- slider Area End-->
-    <!--? Services Area Start -->
-    <section class="services-area pt-top border-bottom pb-20 mb-60">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-8">
-                    <div class="section-tittle text-center mb-55">
-                        <span class="element">Our Process</span>
-                        <h2>This is how we work</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <?php
-                //** Link dẫn
-                $link1 = array(
-                    "services.php",
-                    "services.php",
-                    "services.php"
-                );
-                //** Dòng tip
-                $tip = array(
-                    "We collect your clothes",
-                    "Wash your clothes",
-                    "Get delivery"
-                );
-                //** Text
-                $text = array(
-                    "The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!",
-                    "The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!",
-                    "The automated process starts as soon as your clothes go into the machine. The outcome is gleaming clothes!"
-                );
-                for ($i = 0; $i < count($tip); $i++) {
-                ?>
-                <div class="col-4">
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="assets/img/icon/services-icon<?= ($i + 1) ?>.svg" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="<?= $link1[$i] ?>"><?= $tip[$i] ?></a></h5>
-                            <p><?= $text[$i] ?></p>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                }
-                ?>
-            </div>
-        </div>
-    </section>
-    <!-- Services End -->
-    <!--? Offer-services Start  -->
-    <section class="offer-services pb-bottom2">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-8">
-                    <div class="section-tittle text-center mb-55">
-                        <span class="element">Services</span>
-                        <h2>Services we offer</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-lg-6 col-md-6">
-                    <div class="single-offers">
-                        <img src="assets/img/gallery/offers1.png" alt="" class=" w-100">
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="single-offers">
-                        <img src="assets/img/gallery/offers2.png" alt="" class=" w-100">
-                        <div class="offers-caption text-center">
-                            <div class="cat-icon">
-                                <img src="assets/img/icon/offers-icon1.png" alt="">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.php">Cloth laundry</a></h5>
-                                <p>The automated process starts as soon as your clothes go into the machine. The outcome
-                                    is gleaming clothes!!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="single-offers">
-                        <img src="assets/img/gallery/offers2.png" alt="" class=" w-100">
-                        <div class="offers-caption text-center">
-                            <div class="cat-icon">
-                                <img src="assets/img/icon/offers-icon1.png" alt="">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="services.php">Cloth ironing</a></h5>
-                                <p>The automated process starts as soon as your clothes go into the machine. The outcome
-                                    is gleaming clothes!!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="single-offers">
-                        <img src="assets/img/gallery/offers4.png" alt="" class=" w-100">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Offer-services End  -->
-    <!--? Want To work -->
-    <section class="container">
-        <section class="wantToWork-area" data-background="assets/img/gallery/section_bg01.png">
-            <div class="wants-wrapper w-padding2">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-xl-8 col-lg-9 col-md-7">
-                        <div class="wantToWork-caption wantToWork-caption2">
-                            <h2>Call us for a service</h2>
-                            <p>We deliver the goods to the most complicated places on earth</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-5">
-                        <a href="#" class="btn wantToWork-btn"><img src="assets/img/icon/call2.png" alt=""> Learn
-                            More</a>
                     </div>
                 </div>
             </div>
         </section>
-    </section>
-    <!-- Want To work End -->
-    <!-- Testimonials_start -->
-    <section class="testimonials-area testimonials-overly  position-relative">
-        <div class="container">
-            <div class="border-bottom section-padding40 ">
+        <!-- slider Area End-->
+        <!--* Utilities Area Start -->
+        <section class="utilities-area border-bottom mb-5">
+            <div class="container">
                 <div class="row">
-                    <div class="col-xl-12">
-                        <!-- testmonial-image -->
-                        <div class="testmonial-nav text-center">
-                            <div class="testmonial-thumb">
-                                <img src="assets/img/gallery/testimonila1.png" alt="">
+                    <div class="col section-tittle text-center mb-5">
+                        <span class="element">Tiện ích</span>
+                        <h2>Những tiện ích bạn có tại Zala</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 align-center">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <img src="assets/img/icon/services-icon1.png" srcset="assets/img/icon/services-icon1.svg">
                             </div>
-                            <div class="testmonial-thumb">
-                                <img src="assets/img/gallery/testimonila2.png" alt="">
-                            </div>
-                            <div class="testmonial-thumb">
-                                <img src="assets/img/gallery/testimonila3.png" alt="">
-                            </div>
-                            <div class="testmonial-thumb">
-                                <img src="assets/img/gallery/testimonila2.png" alt="">
+                            <div class="cat-cap">
+                                <h5>Đa dạng lựa chọn giặt là</h5>
+                                <p>Nếu bạn sở hữu 1 gói sản phẩm, bạn có cơ hội lựa chọn địa điểm giặt là phù hợp cùng với đó là được trải nghiệm đa dạng các công nghệ giặt tại hệ sinh thái của ZALA</p>
                             </div>
                         </div>
-                        <div class="testmonial-item-active text-center">
-                            <?php
-                            for ($i = 0; $i < 4; $i++) {
-                            ?>
-                            <!-- testimonial-single-items -->
-                            <div class="testmonial-item ">
-                                <p class="pera">The automated process starts as soon as your clothes go into the<br>
-                                    machine. The outcome is gleaming clothes!</p>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                    </div>
+                    <div class="col-lg-4 align-center">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <img src="assets/img/icon/Giaohang.png" srcset="assets/img/icon/Giaohang-1.png">
+                            </div>
+                            <div class="cat-cap">
+                                <h5>Giao nhận hàng tận nơi</h5>
+                                <p>Hãy cứ ở nhà, ZALA sẽ tới tận nơi lấy và gửi lại đồ cho bạn trong 1 nốt nhạc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 align-center">
+                        <div class="single-cat text-center">
+                            <div class="cat-icon">
+                                <img src="assets/img/icon/phanhoi.png" alt="">
+                            </div>
+                            <div class="cat-cap">
+                                <h5>Review chân thực</h5>
+                                <p>Người dùng có thể xem trước các review và sau khi sử dụng dịch vụ có thể để lại đánh giá chân thực nhất qua ZALA Feed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--* Utilities Area end -->
+        <!--* Offer-services Start  -->
+        <section class="offer-services pb-5 mb-5" id="service">
+            <div class="container">
+                <div class="row justify-content-center g-0">
+                    <div class="col section-tittle text-center mb-5">
+                        <span class="element">Dịch vụ</span>
+                        <h2>Dịch vụ chúng tôi cung cấp</h2>
+                    </div>
+                    <div class="row g-0 justify-content-center">
+                        <div class="col-lg-6 col-md-9 g-0">
+                            <div class="single-offers">
+                                <img src="assets/img/gallery/offers1.png" alt="" class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-9 g-0">
+                            <div class="single-offers">
+                                <img src="assets/img/gallery/offers2.png" alt="" class="w-100">
+                                <div class="offers-caption text-center">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/icon/offers-icon1.png" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <h5>Gói Basic 1</h5>
+                                        <p class="mx-md-0 mx-3">Độc thân "quyến rũ", lo gì chuyện "giặt giũ". Quần áo mặc xong treo đó, để ZALA lo.</p>
+                                    </div>
                                 </div>
-                                <p> - Rupaya</p>
                             </div>
-                            <?php
-                            }
-                            ?>
+                        </div>
+                        <div class="col-lg-6 col-md-9 g-0">
+                            <div class="single-offers">
+                                <img src="assets/img/gallery/offers2.png" alt="" class="w-100">
+                                <div class="offers-caption text-center">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/icon/offers-icon1.png" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <h5>Gói Basic 2</h5>
+                                        <p class="mx-md-0 mx-3">Phụ nữ ơi, hãy dành thời gian để yêu thương bản thân mình. Cả ngày mệt mỏi, về nhà bừa bộn, quần áo chất đống nhìn muốn buông xuôi. Hãy để ZALA giúp các mẹ 1 tay chăm sóc gia đình.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-9 g-0">
+                            <div class="single-offers">
+                                <img src="assets/img/gallery/offers1.png" alt="" class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-9 g-0">
+                            <div class="single-offers">
+                                <img src="assets/img/gallery/offers4.png" alt="" class="w-100">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-9 g-0">
+                            <div class="single-offers">
+                                <img src="assets/img/gallery/offers2.png" alt="" class="w-100">
+                                <div class="offers-caption text-center">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/icon/offers-icon1.png" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <h5>Gói Premium</h5>
+                                        <p class="mx-md-0 mx-3">Spa kỹ hơn cho các "cục cưng". Nhà không có gì ngoài quần áo "hịn" nhưng lại không biết cách chăm sóc, ZALA kiếm chuyên gia cho.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Testimonials_end -->
-    <!--? Company achievement Start -->
-    <section class="services-area section-padding40 fix">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-8">
-                    <div class="section-tittle text-center mb-55">
-                        <span class="element">Fun Fact</span>
-                        <h2>Company achievement</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-cat text-center">
-                        <div class="cat-cap">
-                            <span>4000</span>
-                            <p>The automated process starts as soon as your clothes go into the machine.</p>
+        </section>
+        <!-- Offer-services End  -->
+        <!--* Want To work -->
+        <section class="wantToWork-area">
+            <div class="container">
+                <div class="wants-wrapper" data-background="assets/img/gallery/section_bg01.png">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-xl-8 col-lg-9 col-md-7">
+                            <div class="wantToWork-caption">
+                                <h2>Gọi cho chúng tôi để biết thêm chi tiết</h2>
+                                <p>Chúng tôi giao hàng đến những nơi phức tạp nhất trong thành phố</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-cat text-center">
-                        <div class="cat-cap">
-                            <span>300+</span>
-                            <p>The automated process starts as soon as your clothes go into the machine.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-cat text-center">
-                        <div class="cat-cap">
-                            <span>95%</span>
-                            <p>The automated process starts as soon as your clothes go into the machine.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="bottom-bt">
-                            <img src="assets/img/gallery/company-bg.png" alt="">
+                        <div class="col-xl-3 col-lg-3 col-md-5">
+                            <a class="btn wantToWork-btn"><img src="assets/img/icon/call2.png" alt=""> (+84) 975729750
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Company achievement End -->
-    <!--? About Area  -->
-    <section class="about-area2 pb-bottom mt-30">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-md-12">
-                    <!-- about-img -->
-                    <div class="about-img ">
-                        <img src="assets/img/gallery/about1.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12">
-                    <div class="about-caption mb-50">
-                        <!-- Section Tittle -->
-                        <div class="section-tittle mb-25">
-                            <h2>About company</h2>
-                        </div>
-                        <p class="mb-20">
-                            The automated process starts as soon as your clothes go into the machine. The outcome is
-                            gleaming clothes!
-                        </p>
-                        <p class="mb-30">The automated process starts as soon as your clothes go into the machine. The
-                            outcome is gleaming clothes!</p>
-
-                        <a href="about.html" class="btn">About Us</a>
-                    </div>
-                </div>
+        </section>
+        <!-- Want To work End -->
+        <!--* Testimonials_start -->
+        <!-- <section></section> -->
+        <!-- Testimonials_end -->
+        <!--* Company achievement Start -->
+        <!-- <section></section> -->
+        <!-- Company achievement End -->
+        <!--* About Area  -->
+        <section class="map-area">
+            <div class="map-wapper">
+                <img src="assets/img/gallery/ZALA.png" alt="" class="w-100">
             </div>
-        </div>
-    </section>
-    <!-- About Area End -->
-    <!--?  Map Area start  -->
-    <div class="Map-area">
-        <img src="assets/img/gallery/Map.png" alt="" class="w-100">
+        </section>
+        <!-- About Area End -->
     </div>
-    <!-- Map Area End -->
 </main>
-<?php include("./reuse/footer_body.php") ?>
-<!-- Scroll Up -->
-<div id="back-top">
-    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>
-<?php include("./reuse/footer.php") ?>
+<!-- Footer Start-->
+<?php include('./reuse/footer_body.php'); ?>
+
+<!-- Footer End-->
+
+<?php include('./reuse/footer.php'); ?>
