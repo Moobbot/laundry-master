@@ -33,7 +33,8 @@
                     </ul>
                 </div>
                 <div class="header-right">
-                    <a href="../order/login.php" class="header-btn2">Đặt ngay!</a>
+                    <!-- <a href="./order/login.php" class="header-btn2">Đặt ngay!</a> -->
+                    <a href="./foodienator/" class="header-btn2">Đặt ngay!</a>
                 </div>
             </nav>
         </div>
