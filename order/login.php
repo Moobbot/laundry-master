@@ -14,7 +14,7 @@ include('./reuse/header.php');
                                     <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center">
                                         <div>
                                             <div class=" d-flex justify-content-center">
-                                                <img src="../assets/img/logo/logo_zala.png" class="img-fluid" alt="">
+                                                <img src="../assets/img/logo/logo_zala-2.png" class="img-fluid" alt="">
                                             </div>
                                             <h2 class="x">Chúng tôi đem tới nền tảng kết nối giặt là đến với ngôi nhà của bạn.
                                         </div>
