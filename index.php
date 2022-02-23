@@ -45,7 +45,7 @@ include('./reuse/load_and_up.php');
                     <div class="row g-0 justify-content-center">
                         <div class="col-lg-6 col-md-9 g-0">
                             <div class="single-offers">
-                                <img src="assets/img/gallery/offers1.png" alt="" class="w-100">
+                                <img src="assets/img/gallery/basic1.png" alt="" class="w-100">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-9 g-0">
@@ -78,12 +78,12 @@ include('./reuse/load_and_up.php');
                         </div>
                         <div class="col-lg-6 col-md-9 g-0">
                             <div class="single-offers">
-                                <img src="assets/img/gallery/offers1.png" alt="" class="w-100">
+                                <img src="assets/img/gallery/basic2.png" alt="" class="w-100">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-9 g-0">
                             <div class="single-offers">
-                                <img src="assets/img/gallery/offers4.png" alt="" class="w-100">
+                                <img src="assets/img/gallery/premium.png" alt="" class="w-100">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-9 g-0">
