@@ -35,15 +35,16 @@ include('./reuse/header.php');
                                             </div>
                                             <div class="d-flex justify-content-start mb-3 mb-lg-4">
                                                 <a href="#" class="text-decoration-none text-center">Tạo tài
-                                                    khoản!!!</a>
+                                                    khoản</a>
                                             </div>
                                             <div class="d-flex justify-content-start mb-3 mb-lg-4">
                                                 <a href="#" class="text-decoration-none text-center">Quên mật
                                                     khẩu?</a>
                                             </div>
                                             <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                                <button type="submit" class="btn btn-primary btn-lg">Đăng
-                                                    nhập</button>
+                                                <!-- <button type="submit" class="btn btn-primary btn-lg">Đăng nhập</button> -->
+                                                <a href="./index.php" class="btn btn-primary btn-lg">Đăng nhập</a>
+                                                <!-- <a href="../foodienator/" class="btn btn-primary btn-lg">Đăng nhập</a> -->
                                             </div>
                                         </form>
                                     </div>

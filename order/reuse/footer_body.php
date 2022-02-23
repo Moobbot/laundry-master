@@ -46,7 +46,7 @@
         </div>
     </div>
     <!-- footer-bottom area -->
-    <div class="footer-bottom-area section-bg2" data-background="assets/img/gallery/footer-bg.png">
+    <div class="footer-bottom-area section-bg2" data-background="../assets/img/gallery/footer-bg.png">
         <div class="container">
             <div class="footer-border">
                 <div class="row d-flex align-items-center">
