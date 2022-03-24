@@ -12,12 +12,12 @@
     /* 2. sticky And Scroll UP */
     $(window).on('scroll', function() {
         var scroll = $(window).scrollTop();
-        if (scroll < 400) {
+        if (scroll < 100) {
             $(".header-sticky").removeClass("sticky-bar");
-            $('#back-top').fadeOut(600);
+            $('#back-top').fadeOut(500);
         } else {
             $(".header-sticky").addClass("sticky-bar");
-            $('#back-top').fadeIn(600);
+            $('#back-top').fadeIn(500);
         }
     });
 
